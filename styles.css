@@ -5,9 +5,10 @@
     --bg-dark: #000000;        
     --bg-card: #0a0a0a;        
     --text-main: #e2e8f0;      
-    --text-muted: #94a3b8;     
+    --text-muted: #7291bd;     
     --primary-blue: #3b82f6;   
-    --accent-orange: #f97316;  
+    --accent-orange: #f97316; 
+    --code-text: #003B4F;
     
     /* Variables de Espaciado (Regla 8px) */
     --space-xs: 4px;   /* 0.5x */
@@ -217,15 +218,17 @@ tr:hover td {
 
 /* Bloques de código */
 code {
-    background-color: #111;
-    color: var(--accent-orange);
+    background-color: #bdbdbd !important;
+    color: var(--code-text) !important;
     font-family: 'Consolas', monospace;
     padding: var(--space-xs) var(--space-sm);
     border-radius: 4px;
+    
 }
 
 pre {
-    background-color: #0a0a0a;
+    background-color: #989a9c !important;
+    color: #e2e8f0 !important;
     padding: var(--space-md);
     border: 1px solid #333;
     border-radius: 8px;
