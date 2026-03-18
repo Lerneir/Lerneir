@@ -58,7 +58,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" integrity="sha384-ZvpUoO/+PpLXR1lu4jmpXWu80pZlYUAfxl5NsBMWOEPSjUn/6Z/hRTt8+pR6L4N2" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -103,6 +103,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdn.jsdelivr.net/npm/requirejs@2.3.6/require.min.js" integrity="sha384-c9c+LnTbwQ3aujuU7ULEPVvgLs+Fn6fJUvIGTsuu1ZcCf11fiEubah0ttpca4ntM sha384-6V1/AdqZRWk1KAlWbKBlGhN7VG4iE/yAZcO6NZPMF8od0vukrvr0tg4qY6NSrItx" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -201,7 +204,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><strong>SQL Data Architecture</strong>: A structured SQLite backend for managing asset metadata, historical candidates, and portfolio tracking.</li>
 <li><strong>Transaction Cost Modeling</strong>: Realistic 0.1% (configurable) fee application on every rebalance.</li>
 </ul>
-<div id="setup" class="cell" data-execution_count="1">
+<div id="setup" class="cell" data-execution_count="19">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> sys</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -214,100 +217,284 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> src.portfolio <span class="im">import</span> WalkForwardBacktester, DataManager, DatabaseManager</span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Framework Components Loaded Successfully."</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Framework Components Loaded Successfully.</code></pre>
+</div>
 </div>
 </section>
 </section>
 <section id="quantitative-data-infrastructure" class="level2">
 <h2 class="anchored" data-anchor-id="quantitative-data-infrastructure">1. Quantitative Data Infrastructure</h2>
 <p>The project uses a structured SQL database to maintain data integrity. Below we check the current status of our <code>Historical_Candidates</code> table, which drives the walk-forward simulation.</p>
-<div id="database_check" class="cell" data-execution_count="2">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>db <span class="op">=</span> DatabaseManager()</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>candidates <span class="op">=</span> db.execute_query(<span class="st">"SELECT ticker, candidate_date, selection_strategy FROM Historical_Candidates LIMIT 5"</span>)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>pd.DataFrame(candidates, columns<span class="op">=</span>[<span class="st">'Ticker'</span>, <span class="st">'Date'</span>, <span class="st">'Strategy'</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="database_check" class="cell" data-execution_count="20">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>db <span class="op">=</span> DatabaseManager()</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>candidates <span class="op">=</span> db.execute_query(<span class="st">"SELECT ticker, candidate_date, selection_strategy FROM Historical_Candidates LIMIT 5"</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>pd.DataFrame(candidates, columns<span class="op">=</span>[<span class="st">'Ticker'</span>, <span class="st">'Date'</span>, <span class="st">'Strategy'</span>])</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[*] Using database at: c:\Users\User\Documents\GitHub\Lerneir\projects\SP500_Portfolio\sp500_portfolio.db</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="20">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Ticker</th>
+<th data-quarto-table-cell-role="th">Date</th>
+<th data-quarto-table-cell-role="th">Strategy</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">0</th>
+<td>AAPL</td>
+<td>2023-01-03</td>
+<td>S&amp;P 500 Historical</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">1</th>
+<td>AMZN</td>
+<td>2023-01-03</td>
+<td>S&amp;P 500 Historical</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">2</th>
+<td>BRK-B</td>
+<td>2023-01-03</td>
+<td>S&amp;P 500 Historical</td>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">3</th>
+<td>GOOG</td>
+<td>2023-01-03</td>
+<td>S&amp;P 500 Historical</td>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">4</th>
+<td>GOOGL</td>
+<td>2023-01-03</td>
+<td>S&amp;P 500 Historical</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
 </div>
 </section>
 <section id="walk-forward-simulation-strategy-comparison" class="level2">
 <h2 class="anchored" data-anchor-id="walk-forward-simulation-strategy-comparison">2. Walk-Forward Simulation Strategy Comparison</h2>
 <p>We will now run three distinct quantitative strategies and compare them against the <strong>S&amp;P 500 (SPY)</strong> benchmark: 1. <strong>Markowitz (Sharpe)</strong>: Optimizes for the highest return relative to total volatility. 2. <strong>Sortino</strong>: Optimizes for the highest return relative to <em>downside</em> volatility (newly added). 3. <strong>Dynamic Rebalance</strong>: Uses Sharpe optimization but triggers additional rebalances if rolling volatility exceeds 20%.</p>
-<div id="run_simulations" class="cell" data-execution_count="3">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> {}</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>configs <span class="op">=</span> [</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    {<span class="st">'name'</span>: <span class="st">'Sharpe (Markowitz)'</span>, <span class="st">'optimizer'</span>: <span class="st">'markowitz'</span>, <span class="st">'dynamic'</span>: <span class="va">None</span>},</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    {<span class="st">'name'</span>: <span class="st">'Sortino (Downside Focus)'</span>, <span class="st">'optimizer'</span>: <span class="st">'sortino'</span>, <span class="st">'dynamic'</span>: <span class="va">None</span>},</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    {<span class="st">'name'</span>: <span class="st">'Dynamic Sharpe (20% Vol Trigger)'</span>, <span class="st">'optimizer'</span>: <span class="st">'markowitz'</span>, <span class="st">'dynamic'</span>: <span class="fl">0.20</span>}</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>]</span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> cfg <span class="kw">in</span> configs:</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    bt <span class="op">=</span> WalkForwardBacktester(</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>        optimizer_type<span class="op">=</span>cfg[<span class="st">'optimizer'</span>], </span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>        vol_threshold<span class="op">=</span>cfg[<span class="st">'dynamic'</span>]</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Use the local file since we are running inside the project folder</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    equity, _ <span class="op">=</span> bt.run(<span class="st">'portfolio_historical_candidates.csv'</span>)</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    results[cfg[<span class="st">'name'</span>]] <span class="op">=</span> equity</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Fetch Benchmark for comparison</span></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>dm <span class="op">=</span> DataManager()</span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>spy_prices <span class="op">=</span> dm.fetch_prices([<span class="st">'SPY'</span>], results[<span class="st">'Sharpe (Markowitz)'</span>].index[<span class="dv">0</span>], results[<span class="st">'Sharpe (Markowitz)'</span>].index[<span class="op">-</span><span class="dv">1</span>])</span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>spy_norm <span class="op">=</span> (spy_prices <span class="op">/</span> spy_prices.iloc[<span class="dv">0</span>]) <span class="op">*</span> <span class="dv">10000</span></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>results[<span class="st">'S&amp;P 500 (SPY)'</span>] <span class="op">=</span> spy_norm</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="run_simulations" class="cell" data-execution_count="21">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>results <span class="op">=</span> {}</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>configs <span class="op">=</span> [</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    {<span class="st">'name'</span>: <span class="st">'Sharpe (Markowitz)'</span>, <span class="st">'optimizer'</span>: <span class="st">'markowitz'</span>, <span class="st">'dynamic'</span>: <span class="va">None</span>},</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    {<span class="st">'name'</span>: <span class="st">'Sortino (Downside Focus)'</span>, <span class="st">'optimizer'</span>: <span class="st">'sortino'</span>, <span class="st">'dynamic'</span>: <span class="va">None</span>},</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    {<span class="st">'name'</span>: <span class="st">'Dynamic Sharpe (20% Vol Trigger)'</span>, <span class="st">'optimizer'</span>: <span class="st">'markowitz'</span>, <span class="st">'dynamic'</span>: <span class="fl">0.20</span>}</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> cfg <span class="kw">in</span> configs:</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    bt <span class="op">=</span> WalkForwardBacktester(</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>        optimizer_type<span class="op">=</span>cfg[<span class="st">'optimizer'</span>], </span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>        vol_threshold<span class="op">=</span>cfg[<span class="st">'dynamic'</span>]</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Use the local file since we are running inside the project folder</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    equity, _ <span class="op">=</span> bt.run(<span class="st">'portfolio_historical_candidates.csv'</span>)</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    results[cfg[<span class="st">'name'</span>]] <span class="op">=</span> equity</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Fetch Benchmark for comparison</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>dm <span class="op">=</span> DataManager()</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>spy_prices <span class="op">=</span> dm.fetch_prices([<span class="st">'SPY'</span>], results[<span class="st">'Sharpe (Markowitz)'</span>].index[<span class="dv">0</span>], results[<span class="st">'Sharpe (Markowitz)'</span>].index[<span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>spy_norm <span class="op">=</span> (spy_prices <span class="op">/</span> spy_prices.iloc[<span class="dv">0</span>]) <span class="op">*</span> <span class="dv">10000</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>results[<span class="st">'S&amp;P 500 (SPY)'</span>] <span class="op">=</span> spy_norm</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>=== STARTING WALK-FORWARD BACKTEST (Fee: 0.10%) ===
+    Optimizer: MarkowitzOptimizer
+
+--- PERIOD: 2023-01-03 to 2024-01-03 ---
+
+--- PERIOD: 2024-01-03 to 2025-01-03 ---
+
+--- PERIOD: 2025-01-03 to 2026-01-02 ---
+
+--- PERIOD: 2026-01-02 to 2026-03-18 ---
+=== STARTING WALK-FORWARD BACKTEST (Fee: 0.10%) ===
+    Optimizer: SortinoOptimizer
+
+--- PERIOD: 2023-01-03 to 2024-01-03 ---
+
+--- PERIOD: 2024-01-03 to 2025-01-03 ---
+
+--- PERIOD: 2025-01-03 to 2026-01-02 ---
+
+--- PERIOD: 2026-01-02 to 2026-03-18 ---
+=== STARTING WALK-FORWARD BACKTEST (Fee: 0.10%) ===
+    Optimizer: MarkowitzOptimizer
+    Dynamic Rebalancing Enabled (Vol Threshold: 20.00%)
+
+--- PERIOD: 2023-01-03 to 2024-01-03 ---
+    [!] Triggering Rebalance on 2023-01-04
+    [!] Triggering Rebalance on 2023-04-06
+    [!] Triggering Rebalance on 2023-05-26
+    [!] Triggering Rebalance on 2023-06-16
+
+--- PERIOD: 2024-01-03 to 2025-01-03 ---
+    [!] Triggering Rebalance on 2024-01-04
+    [!] Triggering Rebalance on 2024-02-06
+    [!] Triggering Rebalance on 2024-02-27
+    [!] Triggering Rebalance on 2024-03-19
+    [!] Triggering Rebalance on 2024-08-06
+    [!] Triggering Rebalance on 2024-08-27
+    [!] Triggering Rebalance on 2024-11-07
+
+--- PERIOD: 2025-01-03 to 2026-01-02 ---
+    [!] Triggering Rebalance on 2025-01-06
+    [!] Triggering Rebalance on 2025-02-07
+    [!] Triggering Rebalance on 2025-03-07
+    [!] Triggering Rebalance on 2025-03-28
+    [!] Triggering Rebalance on 2025-04-21
+    [!] Triggering Rebalance on 2025-05-12
+
+--- PERIOD: 2026-01-02 to 2026-03-18 ---
+    [!] Triggering Rebalance on 2026-01-05
+    [!] Triggering Rebalance on 2026-02-12</code></pre>
+</div>
 </div>
 </section>
 <section id="comparative-performance-analysis" class="level2">
 <h2 class="anchored" data-anchor-id="comparative-performance-analysis">3. Comparative Performance Analysis</h2>
 <p>Visualize the equity curves to see how the different optimization mandates performed across market regimes.</p>
-<div id="plot_equity" class="cell" data-execution_count="4">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>compare_df <span class="op">=</span> pd.concat(results.values(), axis<span class="op">=</span><span class="dv">1</span>)</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>compare_df.columns <span class="op">=</span> results.keys()</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> px.line(compare_df, title<span class="op">=</span><span class="st">"Walk-Forward Strategy Comparison"</span>, </span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>              labels<span class="op">=</span>{<span class="st">'value'</span>: <span class="st">'Portfolio Value ($)'</span>, <span class="st">'index'</span>: <span class="st">'Date'</span>})</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>fig.update_layout(template<span class="op">=</span><span class="st">"plotly_white"</span>, legend_title<span class="op">=</span><span class="st">"Strategies"</span>)</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>fig.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="plot_equity" class="cell" data-execution_count="22">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>compare_df <span class="op">=</span> pd.concat(results.values(), axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>compare_df.columns <span class="op">=</span> results.keys()</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> px.line(compare_df, title<span class="op">=</span><span class="st">"Walk-Forward Strategy Comparison"</span>, </span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>              labels<span class="op">=</span>{<span class="st">'value'</span>: <span class="st">'Portfolio Value ($)'</span>, <span class="st">'index'</span>: <span class="st">'Date'</span>})</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>fig.update_layout(template<span class="op">=</span><span class="st">"plotly_white"</span>, legend_title<span class="op">=</span><span class="st">"Strategies"</span>)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>fig.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<pre><code>Unable to display output for mime type(s): application/vnd.plotly.v1+json</code></pre>
+</div>
 </div>
 </section>
 <section id="risk-adjusted-metrics" class="level2">
 <h2 class="anchored" data-anchor-id="risk-adjusted-metrics">4. Risk-Adjusted Metrics</h2>
 <p>Numbers reveal the true quality of a strategy. We calculate the Sharpe Ratio, Sortino Ratio, and Maximum Drawdown for each approach.</p>
-<div id="calculate_metrics" class="cell" data-execution_count="5">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>metrics_list <span class="op">=</span> []</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name, equity <span class="kw">in</span> results.items():</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    m <span class="op">=</span> WalkForwardBacktester.calculate_metrics(equity, results[<span class="st">'S&amp;P 500 (SPY)'</span>])</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    m[<span class="st">'Strategy'</span>] <span class="op">=</span> name</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Ensure all metric values are scalars (floats)</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> key <span class="kw">in</span> [<span class="st">'Total Return'</span>, <span class="st">'Sharpe Ratio'</span>, <span class="st">'Sortino Ratio'</span>, <span class="st">'Max Drawdown'</span>, <span class="st">'Volatility'</span>]:</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>        val <span class="op">=</span> m[key]</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="bu">hasattr</span>(val, <span class="st">'iloc'</span>):</span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>            m[key] <span class="op">=</span> <span class="bu">float</span>(val.iloc[<span class="dv">0</span>])</span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>            m[key] <span class="op">=</span> <span class="bu">float</span>(val)</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    metrics_list.append(m)</span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>metrics_df <span class="op">=</span> pd.DataFrame(metrics_list).set_index(<span class="st">'Strategy'</span>)</span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>metrics_df[[<span class="st">'Total Return'</span>, <span class="st">'Sharpe Ratio'</span>, <span class="st">'Sortino Ratio'</span>, <span class="st">'Max Drawdown'</span>, <span class="st">'Volatility'</span>]].style.<span class="bu">format</span>({</span>
-<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Total Return'</span>: <span class="st">'</span><span class="sc">{:.2%}</span><span class="st">'</span>,</span>
-<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Sharpe Ratio'</span>: <span class="st">'</span><span class="sc">{:.2f}</span><span class="st">'</span>,</span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Sortino Ratio'</span>: <span class="st">'</span><span class="sc">{:.2f}</span><span class="st">'</span>,</span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Max Drawdown'</span>: <span class="st">'</span><span class="sc">{:.2%}</span><span class="st">'</span>,</span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Volatility'</span>: <span class="st">'</span><span class="sc">{:.2%}</span><span class="st">'</span></span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="calculate_metrics" class="cell" data-execution_count="23">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>metrics_list <span class="op">=</span> []</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> name, equity <span class="kw">in</span> results.items():</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    m <span class="op">=</span> WalkForwardBacktester.calculate_metrics(equity, results[<span class="st">'S&amp;P 500 (SPY)'</span>])</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    m[<span class="st">'Strategy'</span>] <span class="op">=</span> name</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Ensure all metric values are scalars (floats)</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> key <span class="kw">in</span> [<span class="st">'Total Return'</span>, <span class="st">'Sharpe Ratio'</span>, <span class="st">'Sortino Ratio'</span>, <span class="st">'Max Drawdown'</span>, <span class="st">'Volatility'</span>]:</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>        val <span class="op">=</span> m[key]</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="bu">hasattr</span>(val, <span class="st">'iloc'</span>):</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>            m[key] <span class="op">=</span> <span class="bu">float</span>(val.iloc[<span class="dv">0</span>])</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>            m[key] <span class="op">=</span> <span class="bu">float</span>(val)</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>    metrics_list.append(m)</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>metrics_df <span class="op">=</span> pd.DataFrame(metrics_list).set_index(<span class="st">'Strategy'</span>)</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>metrics_df[[<span class="st">'Total Return'</span>, <span class="st">'Sharpe Ratio'</span>, <span class="st">'Sortino Ratio'</span>, <span class="st">'Max Drawdown'</span>, <span class="st">'Volatility'</span>]].style.<span class="bu">format</span>({</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Total Return'</span>: <span class="st">'</span><span class="sc">{:.2%}</span><span class="st">'</span>,</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Sharpe Ratio'</span>: <span class="st">'</span><span class="sc">{:.2f}</span><span class="st">'</span>,</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Sortino Ratio'</span>: <span class="st">'</span><span class="sc">{:.2f}</span><span class="st">'</span>,</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Max Drawdown'</span>: <span class="st">'</span><span class="sc">{:.2%}</span><span class="st">'</span>,</span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>    <span class="st">'Volatility'</span>: <span class="st">'</span><span class="sc">{:.2%}</span><span class="st">'</span></span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>})</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="23">
+<style type="text/css">
+</style>
+
+<table id="T_daf81" class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th class="blank level0" data-quarto-table-cell-role="th">&nbsp;</th>
+<th id="T_daf81_level0_col0" class="col_heading level0 col0" data-quarto-table-cell-role="th">Total Return</th>
+<th id="T_daf81_level0_col1" class="col_heading level0 col1" data-quarto-table-cell-role="th">Sharpe Ratio</th>
+<th id="T_daf81_level0_col2" class="col_heading level0 col2" data-quarto-table-cell-role="th">Sortino Ratio</th>
+<th id="T_daf81_level0_col3" class="col_heading level0 col3" data-quarto-table-cell-role="th">Max Drawdown</th>
+<th id="T_daf81_level0_col4" class="col_heading level0 col4" data-quarto-table-cell-role="th">Volatility</th>
+</tr>
+<tr class="even">
+<th class="index_name level0" data-quarto-table-cell-role="th">Strategy</th>
+<th class="blank col0" data-quarto-table-cell-role="th">&nbsp;</th>
+<th class="blank col1" data-quarto-table-cell-role="th">&nbsp;</th>
+<th class="blank col2" data-quarto-table-cell-role="th">&nbsp;</th>
+<th class="blank col3" data-quarto-table-cell-role="th">&nbsp;</th>
+<th class="blank col4" data-quarto-table-cell-role="th">&nbsp;</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<th id="T_daf81_level0_row0" class="row_heading level0 row0" data-quarto-table-cell-role="th">Sharpe (Markowitz)</th>
+<td id="T_daf81_row0_col0" class="data row0 col0">124.04%</td>
+<td id="T_daf81_row0_col1" class="data row0 col1">1.14</td>
+<td id="T_daf81_row0_col2" class="data row0 col2">2.01</td>
+<td id="T_daf81_row0_col3" class="data row0 col3">-20.72%</td>
+<td id="T_daf81_row0_col4" class="data row0 col4">20.62%</td>
+</tr>
+<tr class="even">
+<th id="T_daf81_level0_row1" class="row_heading level0 row1" data-quarto-table-cell-role="th">Sortino (Downside Focus)</th>
+<td id="T_daf81_row1_col0" class="data row1 col0">130.23%</td>
+<td id="T_daf81_row1_col1" class="data row1 col1">1.13</td>
+<td id="T_daf81_row1_col2" class="data row1 col2">2.00</td>
+<td id="T_daf81_row1_col3" class="data row1 col3">-18.78%</td>
+<td id="T_daf81_row1_col4" class="data row1 col4">21.80%</td>
+</tr>
+<tr class="odd">
+<th id="T_daf81_level0_row2" class="row_heading level0 row2" data-quarto-table-cell-role="th">Dynamic Sharpe (20% Vol Trigger)</th>
+<td id="T_daf81_row2_col0" class="data row2 col0">108.26%</td>
+<td id="T_daf81_row2_col1" class="data row2 col1">1.12</td>
+<td id="T_daf81_row2_col2" class="data row2 col2">2.04</td>
+<td id="T_daf81_row2_col3" class="data row2 col3">-22.60%</td>
+<td id="T_daf81_row2_col4" class="data row2 col4">18.73%</td>
+</tr>
+<tr class="even">
+<th id="T_daf81_level0_row3" class="row_heading level0 row3" data-quarto-table-cell-role="th">S&amp;P 500 (SPY)</th>
+<td id="T_daf81_row3_col0" class="data row3 col0">82.76%</td>
+<td id="T_daf81_row3_col1" class="data row3 col1">1.06</td>
+<td id="T_daf81_row3_col2" class="data row3 col2">1.78</td>
+<td id="T_daf81_row3_col3" class="data row3 col3">-18.76%</td>
+<td id="T_daf81_row3_col4" class="data row3 col4">15.17%</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </section>
 <section id="strategic-allocation-insight" class="level2">
 <h2 class="anchored" data-anchor-id="strategic-allocation-insight">5. Strategic Allocation Insight</h2>
 <p>A quick look at how the <strong>Sortino Optimizer</strong> allocated weights during the most recent rebalance to protect against downside risk.</p>
-<div id="final_allocation" class="cell" data-execution_count="6">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>bt_sortino <span class="op">=</span> WalkForwardBacktester(optimizer_type<span class="op">=</span><span class="st">'sortino'</span>)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>_, alloc_history <span class="op">=</span> bt_sortino.run(<span class="st">'portfolio_historical_candidates.csv'</span>)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>latest_date <span class="op">=</span> alloc_history[<span class="st">'Rebalance Date'</span>].<span class="bu">max</span>()</span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>latest_alloc <span class="op">=</span> alloc_history[alloc_history[<span class="st">'Rebalance Date'</span>] <span class="op">==</span> latest_date]</span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> px.pie(latest_alloc, values<span class="op">=</span><span class="st">'Weight'</span>, names<span class="op">=</span><span class="st">'Ticker'</span>, </span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>             title<span class="op">=</span><span class="ss">f"Sortino Allocation for </span><span class="sc">{</span>latest_date<span class="sc">}</span><span class="ss">"</span>,</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>             hole<span class="op">=</span><span class="fl">0.4</span>)</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>fig.update_traces(textinfo<span class="op">=</span><span class="st">'percent+label'</span>)</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>fig.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div id="final_allocation" class="cell" data-execution_count="24">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>bt_sortino <span class="op">=</span> WalkForwardBacktester(optimizer_type<span class="op">=</span><span class="st">'sortino'</span>)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>_, alloc_history <span class="op">=</span> bt_sortino.run(<span class="st">'portfolio_historical_candidates.csv'</span>)</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>latest_date <span class="op">=</span> alloc_history[<span class="st">'Rebalance Date'</span>].<span class="bu">max</span>()</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>latest_alloc <span class="op">=</span> alloc_history[alloc_history[<span class="st">'Rebalance Date'</span>] <span class="op">==</span> latest_date]</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>fig <span class="op">=</span> px.pie(latest_alloc, values<span class="op">=</span><span class="st">'Weight'</span>, names<span class="op">=</span><span class="st">'Ticker'</span>, </span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>             title<span class="op">=</span><span class="ss">f"Sortino Allocation for </span><span class="sc">{</span>latest_date<span class="sc">}</span><span class="ss">"</span>,</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>             hole<span class="op">=</span><span class="fl">0.4</span>)</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>fig.update_traces(textinfo<span class="op">=</span><span class="st">'percent+label'</span>)</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>fig.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>=== STARTING WALK-FORWARD BACKTEST (Fee: 0.10%) ===
+    Optimizer: SortinoOptimizer
+
+--- PERIOD: 2023-01-03 to 2024-01-03 ---
+
+--- PERIOD: 2024-01-03 to 2025-01-03 ---
+
+--- PERIOD: 2025-01-03 to 2026-01-02 ---
+
+--- PERIOD: 2026-01-02 to 2026-03-18 ---</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<pre><code>Unable to display output for mime type(s): application/vnd.plotly.v1+json</code></pre>
+</div>
 </div>
 </section>
 <section id="conclusions-strategic-insights" class="level2">
@@ -315,7 +502,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Based on the walk-forward simulation results and the visual evidence from our comparative analysis, we can draw the following conclusions:</p>
 <section id="robust-alpha-generation" class="level3">
 <h3 class="anchored" data-anchor-id="robust-alpha-generation">1. Robust Alpha Generation</h3>
-<p>All quantitative optimization strategies significantly outperformed the <strong>S&amp;P 500 (SPY)</strong> benchmark. While the benchmark returned <strong>82.76%</strong> over the simulation period, our models delivered returns ranging from <strong>108.26% to 130.24%</strong>, demonstrating the value of active, walk-forward rebalancing even after accounting for transaction costs.</p>
+<p>All quantitative optimization strategies significantly outperformed the <strong>S&amp;P 500 (SPY)</strong> benchmark. While the benchmark returned <strong>82.76%</strong> over the simulation period, the models delivered returns ranging from <strong>108.26% to 130.24%</strong>, demonstrating the value of active, walk-forward rebalancing even after accounting for transaction costs.</p>
 </section>
 <section id="the-power-of-downside-focus-sortino-optimization" class="level3">
 <h3 class="anchored" data-anchor-id="the-power-of-downside-focus-sortino-optimization">2. The Power of Downside Focus (Sortino Optimization)</h3>
