@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://Lerneir.github.io/Lerneir/SP500-Portfolio.html</loc>
-    <lastmod>2026-01-14T15:18:07.866Z</lastmod>
+    <loc>https://Lerneir.github.io/Lerneir/projects/SP500_Portfolio/SP500-Portfolio.html</loc>
+    <lastmod>2026-01-19T21:01:02.266Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Lerneir.github.io/Lerneir/projects/SP500_Portfolio/plan.html</loc>
+    <lastmod>2026-03-09T13:34:40.730Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Lerneir.github.io/Lerneir/index.html</loc>
+    <lastmod>2026-01-19T20:48:40.922Z</lastmod>
   </url>
   <url>
     <loc>https://Lerneir.github.io/Lerneir/about.html</loc>
     <lastmod>2026-01-12T14:02:31.302Z</lastmod>
   </url>
   <url>
-    <loc>https://Lerneir.github.io/Lerneir/index.html</loc>
-    <lastmod>2026-01-14T14:50:40.470Z</lastmod>
+    <loc>https://Lerneir.github.io/Lerneir/projects/SP500_Portfolio/GEMINI.html</loc>
+    <lastmod>2026-03-09T13:45:13.039Z</lastmod>
+  </url>
+  <url>
+    <loc>https://Lerneir.github.io/Lerneir/projects/SP500_Portfolio/SP500-Portfolio-Clean.html</loc>
+    <lastmod>2026-03-18T14:37:43.341Z</lastmod>
   </url>
 </urlset>
