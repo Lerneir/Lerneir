@@ -1,0 +1,10 @@
+pandas
+numpy
+yfinance
+matplotlib
+scipy
+plotly
+seaborn
+ipython
+streamlit
+PyPortfolioOpt

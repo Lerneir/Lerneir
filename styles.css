@@ -8,7 +8,7 @@
     --text-muted: #7291bd;     
     --primary-blue: #3b82f6;   
     --accent-orange: #f97316; 
-    --code-text: #003B4F;
+    --code-text:#f8f8f2;
     
     /* Variables de Espaciado (Regla 8px) */
     --space-xs: 4px;   /* 0.5x */
@@ -218,7 +218,7 @@ tr:hover td {
 
 /* Bloques de código */
 code {
-    background-color: #bdbdbd !important;
+    background-color:var(--bg-dark) !important;
     color: var(--code-text) !important;
     font-family: 'Consolas', monospace;
     padding: var(--space-xs) var(--space-sm);
@@ -227,13 +227,16 @@ code {
 }
 
 pre {
-    background-color: #989a9c !important;
-    color: #e2e8f0 !important;
-    padding: var(--space-md);
+    background-color:var(--bg-dark) !important;
+    color: #var(--code-text) !important;
     border: 1px solid #333;
-    border-radius: 8px;
+    border-radius: 0px;
     margin-bottom: var(--space-lg);
     overflow-x: auto;
+}
+
+.sourceCode.python {
+    background-color:var(--bg-dark) !important;
 }
 
 /* ==========================================================================

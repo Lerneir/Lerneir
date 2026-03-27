@@ -1,0 +1,14 @@
+---
+title: "Projects"
+listing:
+  contents: 
+    - "**/*.qmd"
+    - "**/*.ipynb"
+  sort: "date desc"
+  type: grid
+  categories: true
+  sort-ui: false
+  filter-ui: false
+---
+
+Explore my latest data analysis and financial engineering projects.

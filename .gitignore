@@ -1,0 +1,16 @@
+# Quarto outputs
+/_site/
+*_files/
+.quarto/
+
+# Python/Notebooks
+.ipynb_checkpoints/
+__pycache__/
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+/.quarto/
+**/*.quarto_ipynb

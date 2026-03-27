@@ -1,0 +1,50 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - "*.qmd"
+    - "projects/**/*.ipynb"
+    - "projects/**/*.qmd"
+    - "about/*.qmd"
+
+website:
+  title: "Lerneir Ruiz"
+  description: "Portfolio of Lerneir Ruiz - Data & Business Analyst specializing in Finance and Portfolio Optimization."
+  site-url: "https://lerneir.github.io/Lerneir/" # Update this if your URL is different
+  repo-url: https://github.com/lerneir/Lerneir
+  navbar:
+    background: light
+    search: true
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Projects"
+        href: projects/index.qmd
+      - text: "About"
+        href: about/index.qmd
+    right:
+      - icon: github
+        href: https://github.com/lerneir
+      - icon: linkedin
+        href: https://www.linkedin.com/in/lerneir-ruiz-cifuentes-174350122/
+      - icon: envelope
+        href: mailto:lerneir@yahoo.com
+  page-footer:
+    left: "© 2026 Lerneir Ruiz"
+    right: 
+      - icon: github
+        href: https://github.com/lerneir
+      - icon: linkedin
+        href: https://www.linkedin.com/in/lerneir-ruiz-cifuentes-174350122/
+
+format:
+  html:
+    theme:
+      - superhero
+      - custom.scss
+    css: styles.css
+    toc: true
+    code-fold: true
+    code-summary: "Show code"
+
+editor: visual

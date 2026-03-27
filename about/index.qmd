@@ -1,0 +1,9 @@
+---
+title: "About"
+---
+
+This portfolio showcases my work as a Data and Business Analyst. I specialize in financial data analysis, portfolio optimization, and business intelligence.
+
+I am currently a student at the University of Niagara Falls Canada, pursuing a Master of Data Analytics.
+
+Feel free to explore my projects or reach out via the social links on the home page!

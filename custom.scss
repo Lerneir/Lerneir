@@ -1,0 +1,155 @@
+/*-- scss:defaults --*/
+
+// --- COLORS ---
+$bg-dark: #000000;
+$bg-dark-blue: #0a192f;
+$bg-card: #0a0a0a;
+$text-main: #e2e8f0;
+$text-muted: #7291bd;
+$primary-blue: #3b82f6;
+$accent-orange: #f97316;
+$white: #ffffff;
+
+// --- SPACING (8px Rule) ---
+$space-xs: 4px;
+$space-sm: 8px;
+$space-md: 16px;
+$space-lg: 24px;
+$space-xl: 32px;
+$space-xxl: 48px;
+
+// --- QUARTO OVERRIDES ---
+$body-bg: $bg-dark-blue;
+$body-color: $text-main;
+$link-color: $accent-orange;
+
+$navbar-bg: $white;
+$navbar-fg: #333;
+$navbar-hl: $primary-blue;
+
+// --- BUTTONS ---
+.btn-outline-primary {
+    color: $primary-blue !important;
+    border-color: $primary-blue !important;
+    transition: all 0.3s ease;
+    
+    &:hover {
+        background-color: $primary-blue !important;
+        border-color: $primary-blue !important;
+        color: #000 !important;
+        box-shadow: 0 0 12px rgba(59, 130, 246, 0.4);
+    }
+}
+
+/*-- scss:rules --*/
+
+// --- NAVIGATION BAR ---
+.navbar {
+    border-bottom: 1px solid #333;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    
+    .navbar-brand, .nav-link {
+        color: #333 !important;
+        font-weight: 600;
+        transition: color 0.3s ease;
+        
+        &:hover, &.active {
+            color: $primary-blue !important;
+        }
+    }
+}
+
+// --- HERO / ABOUT SECTION (Solana) ---
+.quarto-about-solana {
+    border-bottom: 1px solid #333;
+    padding-bottom: $space-xl;
+    margin-bottom: $space-xxl;
+
+    .about-image {
+        border: 2px solid $primary-blue;
+        padding: $space-xs;
+        background-color: $bg-card;
+        transition: transform 0.3s ease;
+        
+        &:hover {
+            transform: scale(1.02);
+        }
+    }
+}
+
+// --- SOCIAL LINKS (Pill Style) ---
+.about-links {
+    display: flex;
+    gap: $space-md;
+    margin-top: $space-lg;
+
+    .about-link {
+        color: $primary-blue !important;
+        border: 1px solid $primary-blue !important;
+        background: transparent !important;
+        border-radius: 50px !important;
+        padding: $space-sm $space-lg !important;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        text-decoration: none;
+        transition: all 0.3s ease !important;
+
+        &:hover {
+            background-color: $primary-blue !important;
+            color: #000 !important;
+            box-shadow: 0 0 16px rgba(59, 130, 246, 0.5);
+            transform: translateY(-2px);
+        }
+    }
+}
+
+// --- CARDS & GRID ITEMS ---
+.card, .quarto-grid-item {
+    background-color: $bg-card !important;
+    border: 1px solid #1f2937 !important;
+    border-left: 4px solid $primary-blue !important;
+    border-radius: 8px !important;
+    padding: $space-md;
+    transition: all 0.3s ease;
+
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+        border-color: $primary-blue !important;
+    }
+}
+
+// --- TABLES ---
+table, .table {
+    background-color: $bg-card !important;
+    color: $text-muted !important;
+    border: 1px solid #333 !important;
+    border-radius: 8px;
+    overflow: hidden;
+
+    th {
+        background-color: #0f172a !important;
+        color: $primary-blue !important;
+        border-bottom: 2px solid $primary-blue !important;
+    }
+
+    td {
+        background-color: $bg-card !important;
+        border-bottom: 1px solid #222 !important;
+    }
+
+    tr:hover td {
+        background-color: rgba(59, 130, 246, 0.1) !important;
+        color: #fff !important;
+    }
+}
+
+// --- GENERAL HOVERS ---
+a {
+    transition: all 0.3s ease;
+    &:hover {
+        color: #ff9f43; // Lighter orange for hover
+        text-shadow: 0 0 8px rgba(249, 115, 22, 0.6);
+    }
+}
