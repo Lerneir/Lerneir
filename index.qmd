@@ -1,61 +1,69 @@
 ---
 title: ""
 page-layout: full
-toc: false
 ---
 
-::: {.grid}
-
-::: {.g-col-12 .g-col-md-8}
+:::::: grid
+:::: {.g-col-12 .g-col-md-8}
 # Lerneir Ruiz
-### **Data Engineering & Analytics Specialist | Financial Services Expertise**
+
+### **Data Engineering & Analytics Specialist \| Financial Services Expertise**
 
 I build scalable data solutions that drive operational ROI for global enterprises and financial institutions. Since 2019, I have specialized in transforming fragmented data ecosystems into high-performance assets, supporting clients across the Americas and Europe.
 
 Current Location: **Ontario, Canada**
 
-<div class="about-links" style="margin-top: 1.5em; margin-bottom: 2.5em;">
-  <a href="https://www.linkedin.com/in/lerneir-ruiz-cifuentes-174350122/" class="btn btn-outline-dark" role="button">
-    LinkedIn
-  </a>
-  <a href="https://github.com/lerneir" class="btn btn-outline-dark" role="button">
-    GitHub
-  </a>
-  <a href="mailto:lerneir@yahoo.com" class="btn btn-dark" role="button">
-    Inquire via Email
-  </a>
-</div>
+::: {.about-links style="margin-top: 1.5em; margin-bottom: 2.5em;"}
+<a href="https://www.linkedin.com/in/lerneir-ruiz-cifuentes-174350122/" class="btn btn-outline-primary" role="button"> LinkedIn </a> <a href="https://github.com/lerneir" class="btn btn-outline-primary" role="button"> GitHub </a> <a href="mailto:lerneir@yahoo.com" class="btn btn-outline-primary" role="button"> Email </a>
 :::
+::::
 
 ::: {.g-col-12 .g-col-md-4 .text-center}
 ![](profile.jpg){.rounded width="240px" style="box-shadow: 0 4px 8px rgba(0,0,0,0.1);"}
 :::
-
-:::
-
----
+::::::
 
 ## Global Exposure & Financial Sector Expertise
 
 I bring a track record of supporting high-profile enterprise clients and regional market leaders through strategic data management and technical solution design.
 
-*   **Enterprise Portfolio:** Strategized and supported global clients including **Cisco, Uber, and DoorDash**, as well as regional leaders such as **FLOW, +movil, and Liberty** during my tenure at EY, Techbrites, and Teleperformance.
-*   **Banking Operations:** Extensive experience at **Banco Finandina**, specializing in the automation of KPI frameworks, operational reporting, and data-driven efficiency.
+-   **Client Success at Scale:** Strategized and supported global clients including **Cisco, Uber, and DoorDash**, as well as regional leaders such as **FLOW, +movil, and Liberty** during my tenure at EY, Techbrites, and Teleperformance.
+-   **Operational Excellence:** Proven expertise in the financial sector through **Banco Finandina**, focusing on the automation of mission-critical reporting and the optimization of internal data lifecycles.
 
----
+## Core Solutions for Modern Data Challenges
 
-## Strategic Solutions
+Organizations today struggle with data silos, manual reporting bottlenecks, and the inability to scale predictive models. I provide three core solutions:
 
-### 1. Data Engineering & Workflow Automation
-I specialize in eliminating manual latency. At Techbrites and Teleperformance, I reduced reporting cycles from hours to minutes by building automated ETL pipelines and direct-query integrations. This ensures that leadership decisions are based on the most current data available.
+### 1. High-Performance Data Engineering and Automation
 
-### 2. Financial Modeling & Predictive Analytics
-My technical work focuses on moving beyond descriptive statistics to predictive insights. My recent work in **Portfolio Optimization** utilizes Hierarchical Risk Parity (HRP) and walk-forward analysis to outperform static benchmarks—a framework directly applicable to risk management and behavior modeling in the FI sector.
+I eliminate manual bottlenecks by building automated ETL pipelines and optimizing data sources.
 
-### 3. Solution Design & Technical Governance
-I resolve the misalignment between business stakeholders and development teams. Drawing on my experience as a Senior Business Analyst at EY, I translate complex business requirements into robust technical roadmaps. I ensure that data projects are not just technically sound, but 100% aligned with Program Increment (PI) objectives and ROI targets. Expert in Agile/Scrum leadership, Solution Design, and end-to-end Stakeholder Management.
+\* **The Value:** At Cisco and Teleperformance, I reduced reporting cycles from several hours to minutes by implementing direct query integrations and automated workflows. This allows leadership to act on real-time data rather than historical artifacts.
 
----
+\* **Infrastructure:** SQL (PostgreSQL, MySQL, MS-SQL), Python (Pandas/NumPy), and VBA automation.
+
+### 2. Predictive Analytics and Strategic Optimization
+
+I build models that move beyond "what happened" to "what will happen."
+
+\* **The Value:** My work in Portfolio Optimization demonstrates how Machine Learning (Hierarchical Risk Parity) and Walk-Forward Analysis can mitigate risk and outperform static benchmarks. I apply these techniques to behavior modeling, risk management, and operational efficiency.
+
+\* **Modeling:** Scikit-learn, Regression, Classification, NLP, and Prescriptive Optimization.
+
+### 3. Technical Strategy and Agile Governance
+
+I resolve the misalignment between business stakeholders and development teams.
+
+\* **The Value:** Drawing on my experience as a Senior Business Analyst at EY, I translate complex business requirements into robust technical roadmaps. I ensure that data projects are not just technically sound, but 100% aligned with Program Increment (PI) objectives and ROI targets.
+
+\* **Governance:** Agile/Scrum leadership, Solution Design, and Stakeholder Management.
+
+## Featured Strategic Project
+
+### [**Professional S&P 500 Portfolio Optimization Framework**](projects/SP500_Portfolio/notebooks/SP500-Portfolio.ipynb)
+
+**The Challenge:** Static portfolio strategies fail to adapt to market friction and dynamic risk profiles.\
+**The Solution:** I developed a professional-grade framework utilizing Python and Scikit-learn to implement dynamic rebalancing. By integrating institutional constraints and advanced ML strategies like Sortino and HRP, the framework demonstrates a realistic path to superior risk-adjusted returns.
 
 ## The Trajectory: From Operations to Global Strategy
 
@@ -63,32 +71,32 @@ My professional evolution began on the front lines of banking at **Banco Finandi
 
 This problem-solving mindset has remained consistent throughout my career. At **Techbrites** and **EY**, I led the technical design for eCare applications for global ISPs, optimized complex internal workflows through structured backlog grooming, and engineered automated ETL processes for regional leaders across the Americas and Europe.
 
----
-
 ## Technical Evolution & Specialization
 
 I am currently scaling my technical capabilities toward cloud-native AI engineering to meet the demands of modern data architectures.
 
-*   **Current Specialization:** Master of Data Analytics Candidate.
-*   **Technical Roadmap:** Currently preparing for **AZ-900 (Azure Fundamentals)** with a strategic progression toward **Azure AI Engineer** certification.
-*   **Key Focus:** Scaling predictive models through **PySpark** and cloud infrastructure to integrate AI-driven insights into enterprise workflows.
-
----
+-   **Current Specialization:** Master of Data Analytics Candidate.
+-   **Technical Roadmap:** Currently preparing for **AZ-900 (Azure Fundamentals)** with a strategic progression toward **Azure AI Engineer** certification.
+-   **Key Focus:** Scaling predictive models through **PySpark** and cloud infrastructure to integrate AI-driven insights into enterprise workflows.
 
 ## Technical Arsenal
 
 | Domain | Expertise |
-| :--- | :--- |
-| **Languages** | Python (Pandas, NumPy, Scikit-learn), **PySpark**, SQL (PostgreSQL, MySQL, MS-SQL), R |
-| **Analysis & BI** | **Tableau**, **Power BI**, Advanced Excel (VBA/Macros), Statistical Modeling |
-| **AI & Science** | Machine Learning, NLP, Time Series Analysis, **Predictive AI Implementation** |
-| **Infrastructure** | ETL Pipelines, API Data Consumption, Agile/Scrum (Jira/Confluence) |
-| **Banking Specific** | Portfolio Optimization, Risk Management, KPI Standardization |
+|:-----------------------------------|:-----------------------------------|
+| **Languages** | **Python** (Pandas, NumPy, Scikit-learn), PySpark, **SQL** (PostgreSQL, MySQL, MS-SQL), **R** |
+| **Analysis & BI** | **Tableau**, **Power BI**, Advanced Excel (VBA/Macros), Statistical Modeling, Prescriptive Analysis. |
+| **AI & Science** | **Machine Learning**, NLP, Time Series Analysis, **Predictive AI Implementation** |
+| **Infrastructure** | **ETL Pipelines**, API Data Consumption, **Agile/Scrum** (Jira/Confluence) |
+| **Financial Specific** | Portfolio Optimization, Risk Management, KPI Standardization |
 
----
+------------------------------------------------------------------------
 
-<div class="text-center" style="margin-top: 4em; padding: 3em; background-color: #fcfcfc; border: 1px solid #eeeeee; border-radius: 4px;">
-  <h3 style="font-weight: 700; color: #333;">Professional Engagement</h3>
-  <p>I am currently available for opportunities in <strong>Data Engineering, Data Science, or Financial Analytics</strong>.</p>
-  <p><strong>Direct contact:</strong> lerneir@yahoo.com</p>
-</div>
+::: text-center
+`<h3 style="font-weight: 700; color: #`{=html}7291bd`;">`{=html}
+
+Professional Engagement</h3>
+
+<p>I am currently available for opportunities in <strong>Data Engineering, Data Science, or Financial Analytics</strong>.</p>
+
+<p><strong>Direct contact:</strong> <a href="mailto:lerneir@yahoo.com" class="btn-outline-primary" role="button"> Email </a></p>
+:::

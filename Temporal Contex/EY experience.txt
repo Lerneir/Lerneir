@@ -1,0 +1,11 @@
+Solution Design & Strategy: Translated complex business needs into technical requirements, user stories, and acceptance criteria, ensuring 100% alignment between technical roadmaps and Business Partner expectations.
+
+Agile Governance & Reporting: Designed custom Jira dashboards to track Program Increment (PI) progress, shifting reporting from task output to strategic feature delivery and streamlining Backlog Refinement.
+
+Stakeholder Coordination: Led cross-functional feature demonstrations and requirement-gathering sessions, acting as the primary liaison between developers, testers, and business stakeholders to ensure accurate execution.
+
+Process Efficiency & Documentation: Streamlined project documentation and decision logs via Confluence, maintaining high quality and timeliness across multiple System Development Life Cycle (SDLC) initiatives.
+
+Quality Assurance & Validation: Validated QA SIT strategies and use case coverage to minimize rework, reducing retesting cycles and ensuring robust application delivery within a regulated environment.
+
+Continuous Improvement: Proactively identified opportunities to improve the requirements lifecycle, maintaining high standards of accountability and professional growth in a fast-paced financial services context.

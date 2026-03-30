@@ -1,0 +1,49 @@
+Year 1, Term 1 courses
+Principles of Analytics
+This course introduces data analytics, focusing on practical skills using relevant software. Students explore data types, collection, cleaning, statistical measurements, visualization, and probability theory for business decisions. Hypothesis testing, ANOVA, and Chi-Square tests are covered. Ethical considerations and real-world applications are integrated, culminating in a capstone project. 
+
+SQL Databases
+SQL competency is the single most important skillset for a Data Analyst. This course provides a comprehensive introduction to the language of relational databases: Structured Query Language (SQL), focusing on the use of SQL for data analysis. Topics covered include: Entity-Relationship modeling, the Relational Model, the SQL language: data retrieval statements, data manipulation and data definition statements.
+
+Python for Data Analysis
+This course focuses on data analysis in Python. Students learn to manipulate data, perform statistical analysis, and create visualizations using Python and Python data tools like Jupyter, NumPy, and Pandas. The course also explores integrating Python code with other analytics tools such as Excel, Power BI, and Tableau.
+
+Data Analytics Case Study 1
+Apply data science, descriptive analytics, SQL, Excel, and relational database knowledge to a real-world marketing analytics problem (e.g., CRM, product management). Students formulate questions and hypotheses, prepare data, build models, and use visualizations to share insights, guided by a realistic scenario.
+
+Year 1, Term 2 courses
+Predictive Analytics
+Building on DA500, this course covers machine learning problem framing and predictive modeling techniques like regression and forecasting. It introduces predictive analysis tools and applications in data mining and machine learning, showcasing real-world predictive data models in healthcare, consumer behavior, and credit risk analysis.
+
+Data Warehousing and Visualization
+This course provides an end-to-end hands-on data analytics experience using Microsoft’s Power BI business analytics service. The students learn to connect, import, and clean data from multiple sources, create data models, analysis to find insights, and to create visual reports, dashboards, as well as mobile apps for users.
+
+Marketing Analytics
+This case-study driven course introduces marketing analytics, exploring how organizations use data to support the 4 Ps of marketing: product, price, place, and promotion. It emphasizes practical employer needs in social media marketing, SEO, customer insights, campaign performance, pricing, category management, and sales effectiveness. Students develop a plan to acquire necessary skills for a marketing analytics career. 
+
+Data Analytics Case Study 2
+Students apply machine learning, predictive analytics, SQL, Excel, and Power BI skills to a real-world operational decision problem (e.g., supply chain, quality control). In this course, they’ll formulate questions and hypotheses, prepare data, build and deploy models, and create visualizations to communicate insights.
+
+Year 1, Term 3 courses
+Prescriptive Analytics
+An introduction to statistical optimization methods and tools for building decision support and automation models. Students explore and evaluate prescriptive analytics models in healthcare, finance, logistics, and other areas of interest. They also develop user-friendly decision support models using Excel, Python, and other tools.
+
+Advanced Data Visualization
+Students first explore a range of data visualization techniques published by the worldwide Tableau community on Tableau Public. They then acquire end-to-end experience using Tableau Desktop to extract, clean, explore, and analyze data from different sources, and share insights using visuals, maps, reports, and Business Intelligence dashboards. Students can further explore how different industries use Tableau as part of their business intelligence solution.
+
+Operations Analytics
+This case-study driven course introduces operations analytics, exploring how organizations use data to reduce costs, improve efficiency, and enhance customer experience. It emphasizes employer needs in supply chain planning, resource scheduling, process optimization, quality control, strategy execution, and project management. Students develop a plan to gain necessary skills for an operations analytics career.
+
+Data Analytics Case Study 3
+Apply machine learning, prescriptive analytics, Python, and Tableau skills to a complex, real-world decision problem. Students formulate questions and hypotheses, prepare data, build and deploy models, and create Tableau visualizations to communicate insights effectively.
+
+Agile Software Development
+This course introduces agile software development practices to big data analytics. Agile emphasizes collaborative, cross-functional teams, adaptive planning, evolutionary development, early delivery, and continuous improvement. It's the leading methodology in today's data analytics field, fostering flexible responses to change and evolving requirements.
+
+Advanced Data Analytics
+This course covers advanced data analytics techniques, including data mining, NLP, and pattern discovery. Students apply these methods to marketing and operations analytics, exploring sentiment analysis, recommendation systems, and AI-driven process control through hands-on projects using advanced Python libraries.
+
+and
+
+Machine Learning
+This course integrates machine learning theory with hands-on applications, covering data preprocessing, algorithms, neural networks, and model evaluation. Students gain practical experience with Python, preparing for industry and research roles in data analysis.
