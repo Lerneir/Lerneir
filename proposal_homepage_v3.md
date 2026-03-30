@@ -1,3 +1,20 @@
+# Proposal: Strategic Portfolio Redesign (Version 3)
+
+This iteration is engineered for the Toronto market, focusing on **Financial Services (FI)** and **Global Enterprise** scale. It eliminates clichés and positions your 2019–2025 analytical tenure as a period of high-impact technical delivery.
+
+---
+
+## Copywriting Strategy
+*   **Targeting:** Optimized for hiring managers at Big Five banks and Tier-1 tech firms.
+*   **The Narrative:** A "frontline-to-framework" story—starting with banking operations and evolving into global technical strategy.
+*   **The "Cisco" Pivot:** Correctly framed as high-profile client support during your tenure at Techbrites.
+*   **Technical Evolution:** Replaces the "student" label with a roadmap toward Azure AI Engineering.
+
+---
+
+## Implementation Code for `index.qmd`
+
+```markdown
 ---
 title: ""
 page-layout: full
@@ -10,7 +27,7 @@ toc: false
 # Lerneir Ruiz
 ### **Data Engineering & Analytics Specialist | Financial Services Expertise**
 
-I build scalable data solutions that drive operational ROI for global enterprises and financial institutions. Since 2019, I have specialized in transforming fragmented data ecosystems into high-performance assets, supporting clients across the Americas and Europe.
+I create scalable data solutions that drive operational ROI for global enterprises and financial institutions. Since 2019, I have specialized in transforming fragmented data ecosystems into high-performance assets, supporting clients across the Americas and Europe.
 
 Current Location: **Ontario, Canada**
 
@@ -39,27 +56,26 @@ Current Location: **Ontario, Canada**
 
 I bring a track record of supporting high-profile enterprise clients and regional market leaders through strategic data management and technical solution design.
 
-*   **Enterprise Portfolio:** Strategized and supported global clients including **Cisco, Uber, and DoorDash**, as well as regional leaders such as **FLOW, +movil, and Liberty** during my tenure at EY, Techbrites, and Teleperformance.
-*   **Banking Operations:** Extensive experience at **Banco Finandina**, specializing in the automation of KPI frameworks, operational reporting, and data-driven efficiency.
+Strategized and supported global clients including **Cisco, Uber, and DoorDash**, as well as regional leaders such as **FLOW, +movil, and Liberty** during my tenure at EY, Techbrites, and Teleperformance. Background in the banking sector (Banco Finandina), specializing in the automation of KPI frameworks, reporting, and operational efficiency.
 
 ---
 
 ## Strategic Solutions
 
 ### 1. Data Engineering & Workflow Automation
-I specialize in eliminating manual latency. At Techbrites and Teleperformance, I reduced reporting cycles from hours to minutes by building automated ETL pipelines and direct-query integrations. This ensures that leadership decisions are based on the most current data available.
+I specialize in eliminating manual latency. At Techbrites and Teleperformance, I reduced reporting cycles from hours to minutes by building automated ETL pipelines and direct-query integrations. This ensures that leadership decisions are based on the most updated data.
 
 ### 2. Financial Modeling & Predictive Analytics
 My technical work focuses on moving beyond descriptive statistics to predictive insights. My recent work in **Portfolio Optimization** utilizes Hierarchical Risk Parity (HRP) and walk-forward analysis to outperform static benchmarks—a framework directly applicable to risk management and behavior modeling in the FI sector.
 
 ### 3. Solution Design & Technical Governance
-I resolve the misalignment between business stakeholders and development teams. Drawing on my experience as a Senior Business Analyst at EY, I translate complex business requirements into robust technical roadmaps. I ensure that data projects are not just technically sound, but 100% aligned with Program Increment (PI) objectives and ROI targets. Expert in Agile/Scrum leadership, Solution Design, and end-to-end Stakeholder Management.
+I resolve the misalignment between business stakeholders and development teams.Drawing on my experience as a Senior Business Analyst at EY, I translate complex business requirements into robust technical roadmaps. I ensure that data projects are not just technically sound, but 100% aligned with Program Increment (PI) objectives and ROI targets.Expert in Agile/Scrum leadership, Solution Design, and end-to-end Stakeholder Management.
 
 ---
 
 ## The Trajectory: From Operations to Global Strategy
 
-My professional evolution began on the front lines of banking at **Banco Finandina**. Building on my **Bachelor's degree in Finance and International Trade from Universidad de la Salle**, I identified critical document management inefficiencies and independently engineered automation solutions, which facilitated my transition into Data Analytics.
+My professional evolution began on the front lines of banking at **Banco Finandina**. By identifying critical document management inefficiencies and independently engineering automation solutions, I transitioned into Data Analytics. 
 
 This problem-solving mindset has remained consistent throughout my career. At **Techbrites** and **EY**, I led the technical design for eCare applications for global ISPs, optimized complex internal workflows through structured backlog grooming, and engineered automated ETL processes for regional leaders across the Americas and Europe.
 
@@ -71,7 +87,7 @@ I am currently scaling my technical capabilities toward cloud-native AI engineer
 
 *   **Current Specialization:** Master of Data Analytics Candidate.
 *   **Technical Roadmap:** Currently preparing for **AZ-900 (Azure Fundamentals)** with a strategic progression toward **Azure AI Engineer** certification.
-*   **Key Focus:** Scaling predictive models through **PySpark** and cloud infrastructure to integrate AI-driven insights into enterprise workflows.
+*   **Focus:** Scaling predictive models through cloud infrastructure and integrating AI-driven insights into enterprise workflows.
 
 ---
 
@@ -79,7 +95,7 @@ I am currently scaling my technical capabilities toward cloud-native AI engineer
 
 | Domain | Expertise |
 | :--- | :--- |
-| **Languages** | Python (Pandas, NumPy, Scikit-learn), **PySpark**, SQL (PostgreSQL, MySQL, MS-SQL), R |
+| **Languages** | Python (Pandas, NumPy, Scikit-learn), SQL (PostgreSQL, MySQL, MS-SQL), R |
 | **Analysis & BI** | **Tableau**, **Power BI**, Advanced Excel (VBA/Macros), Statistical Modeling |
 | **AI & Science** | Machine Learning, NLP, Time Series Analysis, **Predictive AI Implementation** |
 | **Infrastructure** | ETL Pipelines, API Data Consumption, Agile/Scrum (Jira/Confluence) |
@@ -92,3 +108,4 @@ I am currently scaling my technical capabilities toward cloud-native AI engineer
   <p>I am currently available for opportunities in <strong>Data Engineering, Data Science, or Financial Analytics</strong>.</p>
   <p><strong>Direct contact:</strong> lerneir@yahoo.com</p>
 </div>
+```
