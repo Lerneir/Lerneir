@@ -74,53 +74,74 @@
     "href": "index.html",
     "title": "Lerneir Ruiz",
     "section": "",
-    "text": "LinkedIn    GitHub    Email \n\nI am a Data & Business Analyst with a strong background in Finance and International Trade, currently based in Ontario."
+    "text": "I build scalable data solutions that drive operational ROI for global enterprises and financial institutions. Since 2019, I have specialized in transforming fragmented data ecosystems into high-performance assets, supporting clients across the Americas and Europe.\nCurrent Location: Ontario, Canada\n\n LinkedIn   GitHub   Email"
   },
   {
-    "objectID": "index.html#hello",
-    "href": "index.html#hello",
+    "objectID": "index.html#global-exposure-financial-sector-expertise",
+    "href": "index.html#global-exposure-financial-sector-expertise",
     "title": "Lerneir Ruiz",
-    "section": "Hello!",
-    "text": "Hello!\nI am pursuing my Master of Data Analytics at the University of Niagara Falls Canada (UNFC). My passion lies in bridging the gap between complex data and actionable business strategies. I leverage tools like Python, SQL, and Tableau to help organizations optimize portfolios and mitigate risk."
+    "section": "Global Exposure & Financial Sector Expertise",
+    "text": "Global Exposure & Financial Sector Expertise\nI bring a track record of supporting high-profile enterprise clients and regional market leaders through strategic data management and technical solution design.\n\nClient Success at Scale: Strategized and supported global clients including Cisco, Uber, and DoorDash, as well as regional leaders such as FLOW, +movil, and Liberty during my tenure at EY, Techbrites, and Teleperformance.\nOperational Excellence: Proven expertise in the financial sector through Banco Finandina, focusing on the automation of mission-critical reporting and the optimization of internal data lifecycles."
   },
   {
-    "objectID": "index.html#featured-projects",
-    "href": "index.html#featured-projects",
+    "objectID": "index.html#core-solutions-for-modern-data-challenges",
+    "href": "index.html#core-solutions-for-modern-data-challenges",
     "title": "Lerneir Ruiz",
-    "section": "Featured Projects",
-    "text": "Featured Projects\n\n1. Professional S&P 500 Portfolio Optimization Framework\nTools: Python, Pandas, Machine Learning, Optimization Engines\n\nObjective: Implemented a professional-grade Walk-Forward Portfolio Optimization system comparing Sharpe, Sortino, and HRP (Machine learning) strategies.\nValue: Demonstrates how dynamic rebalancing and institutional constraints (like 25% max weights and transaction friction) can significantly outperform static benchmarks while maintaining a realistic risk profile for actual capital deployment."
+    "section": "Core Solutions for Modern Data Challenges",
+    "text": "Core Solutions for Modern Data Challenges\nOrganizations today struggle with data silos, manual reporting bottlenecks, and the inability to scale predictive models. I provide three core solutions:\n\n1. High-Performance Data Engineering and Automation\nI eliminate manual bottlenecks by building automated ETL pipelines and optimizing data sources.\n* The Value: At Cisco and Teleperformance, I reduced reporting cycles from several hours to minutes by implementing direct query integrations and automated workflows. This allows leadership to act on real-time data rather than historical artifacts.\n* Infrastructure: SQL (PostgreSQL, MySQL, MS-SQL), Python (Pandas/NumPy), and VBA automation.\n\n\n2. Predictive Analytics and Strategic Optimization\nI build models that move beyond “what happened” to “what will happen.”\n* The Value: My work in Portfolio Optimization demonstrates how Machine Learning (Hierarchical Risk Parity) and Walk-Forward Analysis can mitigate risk and outperform static benchmarks. I apply these techniques to behavior modeling, risk management, and operational efficiency.\n* Modeling: Scikit-learn, Regression, Classification, NLP, and Prescriptive Optimization.\n\n\n3. Technical Strategy and Agile Governance\nI resolve the misalignment between business stakeholders and development teams.\n* The Value: Drawing on my experience as a Senior Business Analyst at EY, I translate complex business requirements into robust technical roadmaps. I ensure that data projects are not just technically sound, but 100% aligned with Program Increment (PI) objectives and ROI targets.\n* Governance: Agile/Scrum leadership, Solution Design, and Stakeholder Management."
   },
   {
-    "objectID": "index.html#technical-skills",
-    "href": "index.html#technical-skills",
+    "objectID": "index.html#featured-strategic-project",
+    "href": "index.html#featured-strategic-project",
     "title": "Lerneir Ruiz",
-    "section": "Technical Skills",
-    "text": "Technical Skills\n\n\n\n\n\n\n\nDomain\nTools & Technologies\n\n\n\n\nData Analysis\nSQL (MySQL, PostgreSQL, MS-SQL), NoSQL (MongoDB), Python (pandas, NumPy, scikit-learn), R (tidyverse)\n\n\nData Formats & Integration\nJSON, XML, API data consumption, data transformation\n\n\nData Engineering Fundamentals\nETL pipelines, automation of reporting workflows, data cleaning and transformation\n\n\nFinance\nPortfolio Optimization, Risk Management, Time Series Analysis\n\n\nVisualization\nTableau, Power BI, Matplotlib, Seaborn\n\n\nMachine Learning\nScikit-learn, Regression, Classification Models"
+    "section": "Featured Strategic Project",
+    "text": "Featured Strategic Project\n\nProfessional S&P 500 Portfolio Optimization Framework\nThe Challenge: Static portfolio strategies fail to adapt to market friction and dynamic risk profiles.\nThe Solution: I developed a professional-grade framework utilizing Python and Scikit-learn to implement dynamic rebalancing. By integrating institutional constraints and advanced ML strategies like Sortino and HRP, the framework demonstrates a realistic path to superior risk-adjusted returns."
   },
   {
-    "objectID": "Proposal_Layout.html",
-    "href": "Proposal_Layout.html",
+    "objectID": "index.html#the-trajectory-from-operations-to-global-strategy",
+    "href": "index.html#the-trajectory-from-operations-to-global-strategy",
+    "title": "Lerneir Ruiz",
+    "section": "The Trajectory: From Operations to Global Strategy",
+    "text": "The Trajectory: From Operations to Global Strategy\nMy professional evolution began on the front lines of banking at Banco Finandina. Building on my Bachelor’s degree in Finance and International Trade from Universidad de la Salle, I identified critical document management inefficiencies and independently engineered automation solutions, which facilitated my transition into Data Analytics.\nThis problem-solving mindset has remained consistent throughout my career. At Techbrites and EY, I led the technical design for eCare applications for global ISPs, optimized complex internal workflows through structured backlog grooming, and engineered automated ETL processes for regional leaders across the Americas and Europe."
+  },
+  {
+    "objectID": "index.html#technical-evolution-specialization",
+    "href": "index.html#technical-evolution-specialization",
+    "title": "Lerneir Ruiz",
+    "section": "Technical Evolution & Specialization",
+    "text": "Technical Evolution & Specialization\nI am currently scaling my technical capabilities toward cloud-native AI engineering to meet the demands of modern data architectures.\n\nCurrent Specialization: Master of Data Analytics Candidate.\nTechnical Roadmap: Currently preparing for AZ-900 (Azure Fundamentals) with a strategic progression toward Azure AI Engineer certification.\nKey Focus: Scaling predictive models through PySpark and cloud infrastructure to integrate AI-driven insights into enterprise workflows."
+  },
+  {
+    "objectID": "index.html#technical-arsenal",
+    "href": "index.html#technical-arsenal",
+    "title": "Lerneir Ruiz",
+    "section": "Technical Arsenal",
+    "text": "Technical Arsenal\n\n\n\n\n\n\n\nDomain\nExpertise\n\n\n\n\nLanguages\nPython (Pandas, NumPy, Scikit-learn), PySpark, SQL (PostgreSQL, MySQL, MS-SQL), R\n\n\nAnalysis & BI\nTableau, Power BI, Advanced Excel (VBA/Macros), Statistical Modeling, Prescriptive Analysis.\n\n\nAI & Science\nMachine Learning, NLP, Time Series Analysis, Predictive AI Implementation\n\n\nInfrastructure\nETL Pipelines, API Data Consumption, Agile/Scrum (Jira/Confluence)\n\n\nFinancial Specific\nPortfolio Optimization, Risk Management, KPI Standardization\n\n\n\n\n\n\nProfessional Engagement\n\n\nI am currently available for opportunities in Data Engineering, Data Science, or Financial Analytics.\n\n\nDirect contact:  Email"
+  },
+  {
+    "objectID": "Temporal Contex/Proposal_Layout.html",
+    "href": "Temporal Contex/Proposal_Layout.html",
     "title": "Lerneir Ruiz",
     "section": "",
     "text": "LinkedIn    GitHub    Email \n\nI am a Data & Business Analyst with a strong background in Finance and International Trade, currently based in Ontario."
   },
   {
-    "objectID": "Proposal_Layout.html#hello",
-    "href": "Proposal_Layout.html#hello",
+    "objectID": "Temporal Contex/Proposal_Layout.html#hello",
+    "href": "Temporal Contex/Proposal_Layout.html#hello",
     "title": "Lerneir Ruiz",
     "section": "Hello!",
     "text": "Hello!\nI am pursuing my Master of Data Analytics at the University of Niagara Falls Canada (UNFC). My passion lies in bridging the gap between complex data and actionable business strategies. I leverage tools like Python, SQL, and Tableau to help organizations optimize portfolios and mitigate risk."
   },
   {
-    "objectID": "Proposal_Layout.html#featured-projects",
-    "href": "Proposal_Layout.html#featured-projects",
+    "objectID": "Temporal Contex/Proposal_Layout.html#featured-projects",
+    "href": "Temporal Contex/Proposal_Layout.html#featured-projects",
     "title": "Lerneir Ruiz",
     "section": "Featured Projects",
     "text": "Featured Projects\n\n1. Professional S&P 500 Portfolio Optimization Framework\nTools: Python, Pandas, Machine Learning, Optimization Engines\n\nObjective: Implemented a professional-grade Walk-Forward Portfolio Optimization system comparing Sharpe, Sortino, and HRP (Machine learning) strategies.\nValue: Demonstrates how dynamic rebalancing and institutional constraints (like 25% max weights and transaction friction) can significantly outperform static benchmarks while maintaining a realistic risk profile for actual capital deployment."
   },
   {
-    "objectID": "Proposal_Layout.html#technical-skills",
-    "href": "Proposal_Layout.html#technical-skills",
+    "objectID": "Temporal Contex/Proposal_Layout.html#technical-skills",
+    "href": "Temporal Contex/Proposal_Layout.html#technical-skills",
     "title": "Lerneir Ruiz",
     "section": "Technical Skills",
     "text": "Technical Skills\n\n\n\n\n\n\n\nDomain\nTools & Technologies\n\n\n\n\nData Analysis\nSQL (MySQL, PostgreSQL, MS-SQL), NoSQL (MongoDB), Python (pandas, NumPy, scikit-learn), R (tidyverse)\n\n\nData Formats & Integration\nJSON, XML, API data consumption, data transformation\n\n\nData Engineering Fundamentals\nETL pipelines, automation of reporting workflows, data cleaning and transformation\n\n\nFinance\nPortfolio Optimization, Risk Management, Time Series Analysis\n\n\nVisualization\nTableau, Power BI, Matplotlib, Seaborn\n\n\nMachine Learning\nScikit-learn, Regression, Classification Models"

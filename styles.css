@@ -299,3 +299,52 @@ pre {
         padding-right: 16px;
     }
 }
+
+/* Contenedor principal del footer */
+.nav-footer {
+    display: flex;
+    justify-content: space-between; /* Separa izquierda, centro y derecha */
+    align-items: center;
+    flex-wrap: wrap; /* Permite que los elementos bajen si no caben */
+    padding: 8px;
+    gap: 8px; /* Espacio entre elementos cuando se apilen */
+  }
+  
+  /* Ajustes para los bloques internos */
+  .nav-footer-left, 
+  .nav-footer-center, 
+  .nav-footer-right {
+    flex: 1; /* Hace que cada sección ocupe el mismo espacio */
+    min-width: 120px; /* Evita que se compriman demasiado */
+  }
+  
+  /* Alineación de los iconos */
+  .footer-items {
+    display: flex;
+    justify-content: flex-end; /* Iconos a la derecha en PC */
+    margin: 0;
+    padding: 0;
+    gap: 16px;
+  }
+  
+  /* --- RESPONSIVIDAD PARA MÓVILES --- */
+  @media (max-width: 768px) {
+    .nav-footer {
+      flex-direction: row; /* Apila los elementos verticalmente */
+      text-align: center;    /* Centra el texto */
+    }
+  
+    .nav-footer-right .footer-items {
+      justify-content: center; /* Centra los iconos en móvil */
+    }
+    
+    .nav-footer-center {
+      display: none; /* Opcional: oculta el div vacío central en móvil */
+    }
+    .footer-items {
+    display: flex;
+    justify-content: flex-end; /* Iconos a la derecha en PC */
+    margin: 0;
+    padding: 0;
+    }
+    }

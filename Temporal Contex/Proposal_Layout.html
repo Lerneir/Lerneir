@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Projects – Lerneir Ruiz</title>
+<title>proposal_layout – Lerneir Ruiz</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
@@ -70,65 +68,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../styles.css">
 </head>
@@ -155,7 +95,7 @@ window.Quarto = {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../projects/index.html" aria-current="page"> 
+    <a class="nav-link" href="../projects/index.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
@@ -187,74 +127,104 @@ window.Quarto = {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RmluYW5jZQ==">Finance <span class="quarto-category-count">(1)</span></div><div class="category" data-category="T3B0aW1pemF0aW9u">Optimization <span class="quarto-category-count">(1)</span></div><div class="category" data-category="UHl0aG9u">Python <span class="quarto-category-count">(1)</span></div></div></div>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#hello" id="toc-hello" class="nav-link active" data-scroll-target="#hello">Hello!</a></li>
+  <li><a href="#featured-projects" id="toc-featured-projects" class="nav-link" data-scroll-target="#featured-projects">Featured Projects</a>
+  <ul class="collapse">
+  <li><a href="#professional-sp-500-portfolio-optimization-framework" id="toc-professional-sp-500-portfolio-optimization-framework" class="nav-link" data-scroll-target="#professional-sp-500-portfolio-optimization-framework"><strong>1. Professional S&amp;P 500 Portfolio Optimization Framework</strong></a></li>
+  </ul></li>
+  <li><a href="#technical-skills" id="toc-technical-skills" class="nav-link" data-scroll-target="#technical-skills">Technical Skills</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content column-page-left" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><h1 class="title display-7">Lerneir Ruiz</h1></header>
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">Projects</h1>
+
+
+
+<div class="grid">
+<section id="lerneir-ruiz" class="level1 g-col-12 g-col-md-8">
+
+<div class="about-links" style="margin-top: 1em; margin-bottom: 2em;">
+<p><a href="https://www.linkedin.com/in/lerneir-ruiz-cifuentes-174350122/" class="btn btn-outline-primary" role="button"> <i class="bi bi-linkedin"></i> LinkedIn </a> <a href="https://github.com/lerneir" class="btn btn-outline-primary" role="button"> <i class="bi bi-github"></i> GitHub </a> <a href="mailto:lerneir@yahoo.com" class="btn btn-outline-primary" role="button"> <i class="bi bi-envelope"></i> Email </a></p>
 </div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<p>Explore my latest data analysis and financial engineering projects.</p>
-
-
-
-
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="RmluYW5jZSUyQ1B5dGhvbiUyQ09wdGltaXphdGlvbg==" data-listing-file-modified-sort="1774631902424" data-listing-reading-time-sort="6" data-listing-word-count-sort="1006">
-<a href="../projects/SP500_Portfolio/notebooks/SP500-Portfolio.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="../projects/SP500_Portfolio/notebooks/thumbnail.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-S&amp;P 500 Portfolio Optimization
-</h5>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('RmluYW5jZQ=='); return false;">Finance</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('UHl0aG9u'); return false;">Python</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('T3B0aW1pemF0aW9u'); return false;">Optimization</div>
-
-</div>
-<div class="card-text listing-description delink">
-<p>Dynamic Walk-Forward Optimization using Python.</p>
-</div>
-<div class="card-attribution card-text-small start">
-<div class="listing-author">
-
+<p>I am a <strong>Data &amp; Business Analyst</strong> with a strong background in <strong>Finance and International Trade</strong>, currently based in <strong>Ontario</strong>.</p>
+</section>
+<div class="g-col-12 g-col-md-4 text-center">
+<p><img src="profile.jpg" class="rounded-circle img-fluid" style="border: 2px solid #dee2e6;" width="250"></p>
 </div>
 </div>
-</div>
-</div></a>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+<hr>
+<section id="hello" class="level2">
+<h2 class="anchored" data-anchor-id="hello">Hello!</h2>
+<p>I am pursuing my <strong>Master of Data Analytics</strong> at the University of Niagara Falls Canada (UNFC). My passion lies in bridging the gap between complex data and actionable business strategies. I leverage tools like <strong>Python, SQL, and Tableau</strong> to help organizations optimize portfolios and mitigate risk.</p>
+<hr>
+</section>
+<section id="featured-projects" class="level2">
+<h2 class="anchored" data-anchor-id="featured-projects">Featured Projects</h2>
+<section id="professional-sp-500-portfolio-optimization-framework" class="level3">
+<h3 class="anchored" data-anchor-id="professional-sp-500-portfolio-optimization-framework"><strong>1. <a href="projects/SP500_Portfolio/notebooks/SP500-Portfolio.ipynb">Professional S&amp;P 500 Portfolio Optimization Framework</a></strong></h3>
+<p><strong>Tools:</strong> Python, Pandas, Machine Learning, Optimization Engines</p>
+<ul>
+<li><strong>Objective:</strong> Implemented a professional-grade Walk-Forward Portfolio Optimization system comparing Sharpe, Sortino, and HRP (Machine learning) strategies.</li>
+<li><strong>Value:</strong> Demonstrates how dynamic rebalancing and institutional constraints (like 25% max weights and transaction friction) can significantly outperform static benchmarks while maintaining a realistic risk profile for actual capital deployment.</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="technical-skills" class="level2">
+<h2 class="anchored" data-anchor-id="technical-skills">Technical Skills</h2>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Domain</th>
+<th style="text-align: left;">Tools &amp; Technologies</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Data Analysis</strong></td>
+<td style="text-align: left;">SQL (MySQL, PostgreSQL, MS-SQL), NoSQL (MongoDB), Python (pandas, NumPy, scikit-learn), R (tidyverse)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Data Formats &amp; Integration</strong></td>
+<td style="text-align: left;">JSON, XML, API data consumption, data transformation</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Data Engineering Fundamentals</strong></td>
+<td style="text-align: left;">ETL pipelines, automation of reporting workflows, data cleaning and transformation</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Finance</strong></td>
+<td style="text-align: left;">Portfolio Optimization, Risk Management, Time Series Analysis</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>Visualization</strong></td>
+<td style="text-align: left;">Tableau, Power BI, Matplotlib, Seaborn</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Machine Learning</strong></td>
+<td style="text-align: left;">Scikit-learn, Regression, Classification Models</td>
+</tr>
+</tbody>
+</table>
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
