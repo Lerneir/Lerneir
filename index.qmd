@@ -52,9 +52,7 @@ I engineer models that tell your leadership exactly how to respond to market cha
 ::: {.callout-important appearance="simple" icon="false"}
 ### Technical Strategy
 
-Miscommunication between executives and technical teams wastes your budget.
-
-I resolve the exact disconnect between business stakeholders and technical teams. As a Business Analyst at EY, I led teams to deliver data architecture that strictly achieves corporate objectives.
+Miscommunication between executives and technical teams wastes your budget. I resolve the exact disconnect between business stakeholders and technical teams. As a Business Analyst at EY, I led teams to deliver data architecture that strictly achieves corporate objectives.
 :::
 ::::
 :::::::::
@@ -65,7 +63,7 @@ I resolve the exact disconnect between business stakeholders and technical teams
 
 Traditional investment models often break down when the market gets shaky, and they usually ignore the hidden costs of trading. I built a more realistic framework for managing S&P 500 portfolios that actually accounts for these "blind spots."
 
-### How it works:
+#### How it works:
 
 -   **The Targets:** The system focuses on the 15 largest companies in the index, making sure to clean up any redundant stock listings.
 
