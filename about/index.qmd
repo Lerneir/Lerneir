@@ -60,9 +60,9 @@ While my recent work highlights advanced portfolio optimization in the financial
 ------------------------------------------------------------------------
 
 ::: card-text-center
-<h4>Versatility in Action</h4>
+<h4>Ready to upgrade your data capabilities and technical strategy?</h4>
 
-<p>I am looking for opportunities where I can apply this dual-focus on engineering and strategy to solve complex challenges in any industry.</p>
+<p>I engineer data systems that execute strict business goals. I am currently seeking opportunities to apply my technical architecture and strategic analysis skills to solve complex operational challenges in your organization.</p>
 
 <p><strong>Let's connect:</strong> <a href="mailto:lerneir@yahoo.com" class="btn btn-outline-primary" role="button"> Email </a> <a href="https://www.linkedin.com/in/lerneir-ruiz-cifuentes-174350122/" class="btn btn-outline-primary" role="button"> LinkedIn </a></p>
 :::

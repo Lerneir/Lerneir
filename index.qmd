@@ -42,7 +42,9 @@ Manual data extraction drains operational resources. I develop automated ETL wor
 ::: {.callout-tip appearance="simple" icon="false"}
 ### Predictive & Prescriptive Analytics
 
-Historical data alone cannot protect your bottom line. I engineer models that tell your leadership exactly how to respond to market changes. I use Machine Learning and prescriptive optimization to minimize financial risk and drive superior returns.
+Historical data alone cannot protect your bottom line.
+
+I engineer models that tell your leadership exactly how to respond to market changes. I use Machine Learning and prescriptive optimization to minimize financial risk and drive superior returns.
 :::
 ::::
 
@@ -50,7 +52,9 @@ Historical data alone cannot protect your bottom line. I engineer models that te
 ::: {.callout-important appearance="simple" icon="false"}
 ### Technical Strategy
 
-Miscommunication between executives and technical teams wastes your budget. I resolve the exact disconnect between business stakeholders and technical teams. As a Business Analyst at EY, I led teams to deliver data architecture that strictly achieves corporate objectives.
+Miscommunication between executives and technical teams wastes your budget.
+
+I resolve the exact disconnect between business stakeholders and technical teams. As a Business Analyst at EY, I led teams to deliver data architecture that strictly achieves corporate objectives.
 :::
 ::::
 :::::::::
@@ -59,9 +63,17 @@ Miscommunication between executives and technical teams wastes your budget. I re
 
 ### [**Professional S&P 500 Portfolio Optimization Framework**](projects/SP500_Portfolio/notebooks/SP500-Portfolio.ipynb)
 
-Static investment models fail during market volatility and disguise transaction costs. I engineer a realistic framework for S&P 500 portfolio management to solve these blind spots.
+Traditional investment models often break down when the market gets shaky, and they usually ignore the hidden costs of trading. I built a more realistic framework for managing S&P 500 portfolios that actually accounts for these "blind spots."
 
-I target the top 15 constituents by market capitalization and execute dynamic walk-forward simulations. I automate annual rebalancing and resolve dual-class share redundancies. I maximize risk-adjusted returns using Hierarchical Risk Parity along with Sharpe and Sortino optimizations. I guarantee statistical robustness by applying Ledoit-Wolf shrinkage for covariance estimation. I enforce strict operational limits by capping asset weights between 2% and 25% and applying a 10 basis point transaction fee. This architecture delivers a rigorous simulation strategy instead of a theoretical academic exercise.
+### How it works:
+
+-   **The Targets:** The system focuses on the 15 largest companies in the index, making sure to clean up any redundant stock listings.
+
+-   **The Strategy:** It uses advanced math to balance risk and reward, ensuring the portfolio isn't just chasing profits but is also staying protected.
+
+-   **The Math:** I applied statistical "shrinking" techniques to make the data more reliable and less prone to errors.
+
+-   **The Rules:** To keep things grounded in reality, I set strict limits on how much of any one stock we can own (between 2% and 25%) and factored in a 0.10% fee for every trade.
 
 ## **Global Consulting and Operational Engagements**
 
@@ -78,7 +90,7 @@ Large organizations cannot afford experimental data practices. As an analyst for
 ::: card-text-center
 <h4>Ready to upgrade your data capabilities and technical strategy?</h4>
 
-<p>I am looking for opportunities where I can apply this dual-focus on engineering and strategy to solve complex challenges in any industry.</p>
+<p>I engineer data systems that execute strict business goals. I am currently seeking opportunities to apply my technical architecture and strategic analysis skills to solve complex operational challenges in your organization.</p>
 
 <p>Discover my full trajectory and technical arsenal on my <a href="about/"><strong>About Page</strong></a>.</p>
 
