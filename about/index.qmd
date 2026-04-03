@@ -1,9 +1,68 @@
 ---
-title: "About"
+title: "Architecting Data Systems to Execute Business Goals."
+page-layout: full
 ---
 
-This portfolio showcases my work as a Data and Business Analyst. I specialize in financial data analysis, portfolio optimization, and business intelligence.
+::: grid
+## Professional Philosophy {.g-col-12 .g-col-md-7}
+:::
 
-I am currently a student at the University of Niagara Falls Canada, pursuing a Master of Data Analytics.
+:::::: grid
+::: {.g-col-12 .g-col-md-7}
+I believe that technical complexity should never be a barrier to business value.
 
-Feel free to explore my projects or reach out via the social links on the home page!
+My career has been defined by a single objective: **transforming fragmented data into a strategic advantage.** Whether I am automating a reporting pipeline for a global enterprise or architecting a predictive model for a financial framework, my focus remains on scalability, accuracy, and measurable ROI.
+
+I operate at the intersection of **technical engineering** and **executive strategy**, serving as the translator who ensures that data solutions are built to solve real-world problems.
+:::
+
+:::: {.g-col-12 .g-col-md-5}
+::: {.callout-note appearance="simple"}
+### Key Capabilities
+
+-   **Technical:** PySpark, SQL, ETL, Machine Learning, Cloud AI (Azure).
+-   **Strategic:** Agile Governance, OKR/KPI Design, Solution Architecture.
+-   **Analytical:** Predictive & Prescriptive Analytics, Marketing & Ops Optimization.
+-   **Global:** Experience supporting clients across the Americas and Europe.
+:::
+::::
+::::::
+
+## The Journey: From Operations to Global Strategy
+
+My professional evolution began on the front lines of banking at **Banco Finandina**. Building on my **Bachelor's degree in Finance and International Trade from Universidad de la Salle**, I identified critical document management inefficiencies and independently engineered automation solutions. This problem-solving initiative facilitated my transition from operations into advanced data analytics.
+
+This drive for engineering efficiency at scale has remained consistent throughout my career:
+
+-   **The Automation Edge:** At global firms like **Nub 7/8 (Techbrites)** and **Teleperformance**, I specialized in eliminating manual latency. By engineering automated ETL pipelines and direct-query integrations, I reduced critical reporting cycles from hours to minutes, enabling leadership to act on real-time insights rather than historical artifacts.
+-   **Bridging the Divide:** As a **Senior Business Analyst at EY** and **Techbrites**, I led teams in developing global applications for global ISPs and Sales teams. I acted as the primary liaison between technical developers and business stakeholders, ensuring that 100% of technical delivery was aligned with Program Increment (PI) objectives.
+
+## Broad-Spectrum Mastery: Beyond the Portfolio
+
+While my recent work highlights advanced portfolio optimization in the financial sector, my technical and academic training covers a wide array of business domains.
+
+-   **Current Specialization:** Master of Data Analytics Candidate.
+-   **Continuous Evolution:** Currently preparing for **AZ-900 (Azure Fundamentals)** with a strategic progression toward **Azure AI Engineer** certification. My focus lies in scaling predictive models through cloud infrastructure.
+-   **Domain Versatility:**
+    -   **Marketing & Consumer Analytics:** Applying data to SEO optimization, sentiment analysis, and customer behavior modeling.
+    -   **Operations & Supply Chain:** Using prescriptive analytics to reduce costs and enhance quality control through process optimization.
+
+## Technical Arsenal
+
+| Domain | Expertise |
+|:-----------------------------------|:-----------------------------------|
+| **Languages & Infrastructure** | **Python** (Pandas, NumPy, Scikit-learn), PySpark, **SQL** (PostgreSQL, MySQL, MS-SQL), **R**, API Integration |
+| **Analysis & BI** | **Tableau**, **Power BI**, Advanced Excel (VBA/Macros), Statistical/Prescriptive Modeling |
+| **AI & Data Science** | **Machine Learning**, NLP, Time Series Analysis, Predictive AI Implementation |
+| **Data Engineering** | **ETL Pipeline Automation**, Relational Modeling, CI/CD basic concepts |
+| **Strategy & Governance** | **Agile/Scrum** (Jira/Confluence), Solution Design, Financial Strategy, Risk Management |
+
+------------------------------------------------------------------------
+
+::: card-text-center
+<h4>Versatility in Action</h4>
+
+<p>I am looking for opportunities where I can apply this dual-focus on engineering and strategy to solve complex challenges in any industry.</p>
+
+<p><strong>Let's connect:</strong> <a href="mailto:lerneir@yahoo.com" class="btn btn-outline-primary" role="button"> Email </a> <a href="https://www.linkedin.com/in/lerneir-ruiz-cifuentes-174350122/" class="btn btn-outline-primary" role="button"> LinkedIn </a></p>
+:::

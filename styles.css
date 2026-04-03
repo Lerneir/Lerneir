@@ -2,21 +2,27 @@
    1. VARIABLES Y CONFIGURACIÓN BASE (Regla 8px intacta)
    ========================================================================== */
 :root {
-    --bg-dark: #000000;        
-    --bg-card: #0a0a0a;        
-    --text-main: #e2e8f0;      
-    --text-muted: #7291bd;     
-    --primary-blue: #3b82f6;   
-    --accent-orange: #f97316; 
-    --code-text:#f8f8f2;
-    
+    --bg-dark: #000000;
+    --bg-card: #0f2537;
+    --text-main: #e2e8f0;
+    --text-muted: #7291bd;
+    --primary-blue: #3b82f6;
+    --accent-orange: #f97316;
+    --code-text: #f8f8f2;
+
     /* Variables de Espaciado (Regla 8px) */
-    --space-xs: 4px;   /* 0.5x */
-    --space-sm: 8px;   /* 1x */
-    --space-md: 16px;  /* 2x */
-    --space-lg: 24px;  /* 3x */
-    --space-xl: 32px;  /* 4x */
-    --space-xxl: 48px; /* 6x */
+    --space-xs: 4px;
+    /* 0.5x */
+    --space-sm: 8px;
+    /* 1x */
+    --space-md: 16px;
+    /* 2x */
+    --space-lg: 24px;
+    /* 3x */
+    --space-xl: 32px;
+    /* 4x */
+    --space-xxl: 48px;
+    /* 6x */
 }
 
 /* --- ESTILOS GENERALES --- */
@@ -24,46 +30,61 @@ body {
     background-color: var(--bg-dark);
     color: var(--text-main);
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    font-size: 16px; 
-    line-height: 1.5; 
+    font-size: 16px;
+    line-height: 1.5;
     margin: 0;
     padding: 0;
 }
 
 /* Contenedor principal para layouts 'full' */
-.column-page, .column-body, .main-container {
-    max-width: 1200px; /* Ampliado ligeramente para el diseño horizontal */
+.column-page,
+.column-body,
+.main-container {
+    max-width: 1200px;
+    /* Ampliado ligeramente para el diseño horizontal */
     margin: 0 auto;
-    padding: 0 var(--space-lg); /* 24px a los lados */
+    padding: 0 var(--space-lg);
+    /* 24px a los lados */
 }
 
 /* ==========================================================================
    2. TIPOGRAFÍA
    ========================================================================== */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-weight: 700;
-    margin-top: var(--space-xl); /* 32px */
-    margin-bottom: var(--space-md); /* 16px */
-    line-height: 1.25; 
+    margin-top: var(--space-xl);
+    /* 32px */
+    margin-bottom: var(--space-md);
+    /* 16px */
+    line-height: 1.25;
 }
 
 h1 {
-    font-size: 48px; /* 6x8 */
+    font-size: 48px;
+    /* 6x8 */
     color: var(--text-main);
-    border-bottom: none; /* Quitamos borde del h1 en Solana para limpieza */
+    border-bottom: none;
+    /* Quitamos borde del h1 en Solana para limpieza */
     margin-bottom: var(--space-sm);
 }
 
 h2 {
-    font-size: 32px; /* 4x8 */
+    font-size: 32px;
+    /* 4x8 */
     color: var(--primary-blue);
-    margin-bottom: var(--space-lg); /* 24px */
-    border-bottom: 1px solid #333; /* Separador sutil */
+    margin-bottom: var(--space-lg);
+    /* 24px */
+    border-bottom: 1px solid #333;
+    /* Separador sutil */
     padding-bottom: var(--space-sm);
 }
 
 h3 {
-    font-size: 24px; /* 3x8 */
+    font-size: 24px;
+    /* 3x8 */
     color: var(--text-main);
 }
 
@@ -87,46 +108,57 @@ a:hover {
 /* Contenedor principal del Hero */
 .quarto-about-solana {
     display: flex;
-    flex-direction: row-reverse; /* Foto derecha, Texto izquierda */
+    flex-direction: row-reverse;
+    /* Foto derecha, Texto izquierda */
     align-items: center;
     justify-content: space-between;
-    
+
     margin-top: var(--space-xl);
-    margin-bottom: var(--space-xxl); /* 48px de separación con los proyectos */
+    margin-bottom: var(--space-xxl);
+    /* 48px de separación con los proyectos */
     padding-bottom: var(--space-xl);
-    border-bottom: 1px solid #333; /* Línea divisoria elegante */
+    border-bottom: 1px solid #333;
+    /* Línea divisoria elegante */
 }
 
 /* Columna de Texto (Izquierda) */
 .about-entity {
-    flex: 1; /* Toma el espacio disponible */
-    border-right: none; /* Eliminamos el borde de trestles */
-    padding-right: var(--space-xl); /* Espacio contra la foto */
+    flex: 1;
+    /* Toma el espacio disponible */
+    border-right: none;
+    /* Eliminamos el borde de trestles */
+    padding-right: var(--space-xl);
+    /* Espacio contra la foto */
     text-align: left;
 }
 
 /* Columna de Imagen (Derecha) */
 .about-image {
-    flex: 0 0 auto; /* No se estira */
+    flex: 0 0 auto;
+    /* No se estira */
     margin-left: var(--space-lg);
 }
 
 /* Ajuste específico para la foto */
 .about-image img {
-    border: 2px solid var(--primary-blue); /* Borde sutil azul */
-    padding: var(--space-xs); /* Espacio entre foto y borde */
+    border: 2px solid var(--primary-blue);
+    /* Borde sutil azul */
+    padding: var(--space-xs);
+    /* Espacio entre foto y borde */
     background-color: var(--bg-card);
 }
 
 /* Contenido de la bio (debajo del nombre) */
 .about-contents {
-    padding-left: 0; /* Reseteamos padding */
+    padding-left: 0;
+    /* Reseteamos padding */
 }
 
 /* --- BOTONES SOCIALES (Estilo Píldora Limpia) --- */
 .about-links {
     display: flex;
-    gap: var(--space-md); /* 16px entre botones */
+    gap: var(--space-md);
+    /* 16px entre botones */
     margin-top: var(--space-lg);
 }
 
@@ -134,11 +166,13 @@ a:hover {
     color: var(--primary-blue) !important;
     border: 1px solid var(--primary-blue);
     background: transparent;
-    border-radius: 50px; /* Redondeado completo (Píldora) */
-    
-    padding: var(--space-sm) var(--space-lg); /* 8px vertical, 24px horizontal */
-    
-    font-size: 14px; 
+    border-radius: 50px;
+    /* Redondeado completo (Píldora) */
+
+    padding: var(--space-sm) var(--space-lg);
+    /* 8px vertical, 24px horizontal */
+
+    font-size: 14px;
     display: inline-flex;
     align-items: center;
     transition: all 0.3s ease;
@@ -148,22 +182,29 @@ a:hover {
 
 .about-link:hover {
     background-color: var(--primary-blue);
-    color: #000 !important; /* Texto negro sobre azul */
-    box-shadow: 0 0 16px rgba(59, 130, 246, 0.5); /* Glow azul */
-    transform: translateY(-2px); /* Pequeña elevación */
+    color: #000 !important;
+    /* Texto negro sobre azul */
+    box-shadow: 0 0 16px rgba(59, 130, 246, 0.5);
+    /* Glow azul */
+    transform: translateY(-2px);
+    /* Pequeña elevación */
 }
 
 /* ==========================================================================
    4. TARJETAS Y PROYECTOS (Full Width)
    ========================================================================== */
-.category-block, .card, .quarto-grid-item {
+.category-block,
+.card,
+.quarto-grid-item {
     background-color: var(--bg-card);
     border: 1px solid #1f2937;
     border-left: 4px solid var(--primary-blue);
     border-radius: 8px;
-    
-    padding: var(--space-lg); /* 24px */
-    margin-bottom: var(--space-xl); /* 32px */
+
+    padding: var(--space-lg);
+    /* 24px */
+    margin-bottom: var(--space-xl);
+    /* 32px */
 }
 
 /* ==========================================================================
@@ -171,7 +212,8 @@ a:hover {
    ========================================================================== */
 
 /* Forzamos que la tabla y sus celdas tengan fondo oscuro */
-table, .table {
+table,
+.table {
     width: 100%;
     border-collapse: separate;
     border-spacing: 0;
@@ -179,15 +221,18 @@ table, .table {
     border: 1px solid #333;
     border-radius: 8px;
     overflow: hidden;
-    
+
     /* ¡AQUÍ ESTÁ LA SOLUCIÓN! */
-    background-color: var(--bg-card) !important; /* Fuerza fondo oscuro */
-    color: var(--text-muted) !important;         /* Fuerza texto legible */
+    background-color: var(--bg-card) !important;
+    /* Fuerza fondo oscuro */
+    color: var(--text-muted) !important;
+    /* Fuerza texto legible */
 }
 
 /* Encabezados (Header) */
 th {
-    background-color: #0f172a !important; /* Azul muy oscuro */
+    background-color: #0f172a !important;
+    /* Azul muy oscuro */
     color: var(--primary-blue) !important;
     padding: var(--space-md);
     text-align: left;
@@ -197,37 +242,41 @@ th {
 
 /* Celdas del cuerpo (Body) */
 td {
-    background-color: var(--bg-card) !important; /* Fondo oscuro */
-    color: var(--text-muted) !important;         /* Gris claro legible */
+    background-color: var(--bg-card) !important;
+    /* Fondo oscuro */
+    color: var(--text-muted) !important;
+    /* Gris claro legible */
     padding: var(--space-md);
     border-bottom: 1px solid #222;
 }
 
 /* Si Quarto agrega filas alternas (striped), las oscurecemos */
-.table-striped > tbody > tr:nth-of-type(odd) > * {
-    background-color: rgba(255, 255, 255, 0.03) !important; /* Apenas visible */
+.table-striped>tbody>tr:nth-of-type(odd)>* {
+    background-color: rgba(255, 255, 255, 0.03) !important;
+    /* Apenas visible */
     color: var(--text-main) !important;
 }
 
 /* Efecto al pasar el mouse (Hover) para que se vea moderno */
 tr:hover td {
-    background-color: rgba(59, 130, 246, 0.1) !important; /* Azul muy sutil */
+    background-color: rgba(59, 130, 246, 0.1) !important;
+    /* Azul muy sutil */
     color: #ffffff !important;
     transition: background-color 0.3s ease;
 }
 
 /* Bloques de código */
 code {
-    background-color:var(--bg-dark) !important;
+    background-color: var(--bg-dark) !important;
     color: var(--code-text) !important;
     font-family: 'Consolas', monospace;
     padding: var(--space-xs) var(--space-sm);
     border-radius: 4px;
-    
+
 }
 
 pre {
-    background-color:var(--bg-dark) !important;
+    background-color: var(--bg-dark) !important;
     color: #var(--code-text) !important;
     border: 1px solid #333;
     border-radius: 0px;
@@ -236,7 +285,7 @@ pre {
 }
 
 .sourceCode.python {
-    background-color:var(--bg-dark) !important;
+    background-color: var(--bg-dark) !important;
 }
 
 /* ==========================================================================
@@ -244,24 +293,30 @@ pre {
    ========================================================================== */
 
 @media (max-width: 768px) {
+
     /* 1. EL ENCABEZADO (Foto, Nombre, Redes) -> SE QUEDA CENTRADO */
     .quarto-about-solana {
-        flex-direction: column; /* Apilar verticalmente */
-        align-items: center;    /* Centrar elementos */
+        flex-direction: column;
+        /* Apilar verticalmente */
+        align-items: center;
+        /* Centrar elementos */
     }
-    
+
     .about-entity {
-        text-align: center;     /* Centrar nombre y redes */
+        text-align: center;
+        /* Centrar nombre y redes */
         padding-right: 0;
         margin-bottom: var(--space-lg);
-        order: 1;               /* Poner primero la foto/nombre */
+        order: 1;
+        /* Poner primero la foto/nombre */
         width: 100%;
     }
 
     .about-image {
         margin-left: 0;
         margin-bottom: var(--space-md);
-        order: 0;               /* La foto arriba del todo */
+        order: 0;
+        /* La foto arriba del todo */
     }
 
     /* Centrar los botones de redes sociales */
@@ -272,29 +327,44 @@ pre {
     }
 
     /* 2. EL CONTENIDO (Biografía, Proyectos, Listas) -> ALINEADO A LA IZQUIERDA */
-    .about-contents, 
-    .about-contents p, 
-    .about-contents h1, 
-    .about-contents h2, 
+    .about-contents,
+    .about-contents p,
+    .about-contents h1,
+    .about-contents h2,
     .about-contents h3 {
-        text-align: left !important; /* Forzar alineación izquierda */
+        text-align: left !important;
+        /* Forzar alineación izquierda */
     }
 
     /* Arreglar las listas (Bullet points) para que no se vean "raras" */
     ul {
         text-align: left !important;
-        padding-left: 20px; /* Dar espacio a la sangría */
+        padding-left: 20px;
+        /* Dar espacio a la sangría */
     }
 
     li {
-        margin-bottom: 8px; /* Separar un poco los ítems */
+        margin-bottom: 8px;
+        /* Separar un poco los ítems */
     }
 
     /* 3. AJUSTES GENERALES */
-    h1 { font-size: 32px; text-align: center; } /* El nombre principal sí centrado */
-    h2 { font-size: 24px; text-align: left !important; }   /* Títulos de sección a la izquierda */
-    
-    body, .column-page, .main-container {
+    h1 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    /* El nombre principal sí centrado */
+    h2 {
+        font-size: 24px;
+        text-align: left !important;
+    }
+
+    /* Títulos de sección a la izquierda */
+
+    body,
+    .column-page,
+    .main-container {
         padding-left: 16px;
         padding-right: 16px;
     }
@@ -303,48 +373,60 @@ pre {
 /* Contenedor principal del footer */
 .nav-footer {
     display: flex;
-    justify-content: space-between; /* Separa izquierda, centro y derecha */
+    justify-content: space-between;
+    /* Separa izquierda, centro y derecha */
     align-items: center;
-    flex-wrap: wrap; /* Permite que los elementos bajen si no caben */
+    flex-wrap: wrap;
+    /* Permite que los elementos bajen si no caben */
     padding: 8px;
-    gap: 8px; /* Espacio entre elementos cuando se apilen */
-  }
-  
-  /* Ajustes para los bloques internos */
-  .nav-footer-left, 
-  .nav-footer-center, 
-  .nav-footer-right {
-    flex: 1; /* Hace que cada sección ocupe el mismo espacio */
-    min-width: 120px; /* Evita que se compriman demasiado */
-  }
-  
-  /* Alineación de los iconos */
-  .footer-items {
+    gap: 8px;
+    /* Espacio entre elementos cuando se apilen */
+}
+
+/* Ajustes para los bloques internos */
+.nav-footer-left,
+.nav-footer-center,
+.nav-footer-right {
+    flex: 1;
+    /* Hace que cada sección ocupe el mismo espacio */
+    min-width: 120px;
+    /* Evita que se compriman demasiado */
+}
+
+/* Alineación de los iconos */
+.footer-items {
     display: flex;
-    justify-content: flex-end; /* Iconos a la derecha en PC */
+    justify-content: flex-end;
+    /* Iconos a la derecha en PC */
     margin: 0;
     padding: 0;
     gap: 16px;
-  }
-  
-  /* --- RESPONSIVIDAD PARA MÓVILES --- */
-  @media (max-width: 768px) {
+}
+
+/* --- RESPONSIVIDAD PARA MÓVILES --- */
+@media (max-width: 768px) {
     .nav-footer {
-      flex-direction: row; /* Apila los elementos verticalmente */
-      text-align: center;    /* Centra el texto */
+        flex-direction: row;
+        /* Apila los elementos verticalmente */
+        text-align: center;
+        /* Centra el texto */
     }
-  
+
     .nav-footer-right .footer-items {
-      justify-content: center; /* Centra los iconos en móvil */
+        justify-content: center;
+        /* Centra los iconos en móvil */
     }
-    
+
     .nav-footer-center {
-      display: none; /* Opcional: oculta el div vacío central en móvil */
+        display: none;
+        /* Opcional: oculta el div vacío central en móvil */
     }
+
     .footer-items {
-    display: flex;
-    justify-content: flex-end; /* Iconos a la derecha en PC */
-    margin: 0;
-    padding: 0;
+        display: flex;
+        justify-content: flex-end;
+        /* Iconos a la derecha en PC */
+        margin: 0;
+        padding: 0;
     }
-    }
+}

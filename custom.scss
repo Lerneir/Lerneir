@@ -1,14 +1,14 @@
 /*-- scss:defaults --*/
 
 // --- COLORS ---
-$bg-dark: #000000;
+$bg-dark: #121212;
 $bg-dark-blue: #0a192f;
-$bg-card: #0a0a0a;
-$text-main: #e2e8f0;
+$bg-card: #0f2537;
+$text-main: #E0E0E0;
 $text-muted: #7291bd;
 $primary-blue: #3b82f6;
 $accent-orange: #f97316;
-$white: #ffffff;
+$white: #E0E0E0;
 
 // --- SPACING (8px Rule) ---
 $space-xs: 4px;
@@ -32,7 +32,7 @@ $navbar-hl: $primary-blue;
     color: $primary-blue !important;
     border-color: $primary-blue !important;
     transition: all 0.3s ease;
-    
+
     &:hover {
         background-color: $primary-blue !important;
         border-color: $primary-blue !important;
@@ -46,14 +46,16 @@ $navbar-hl: $primary-blue;
 // --- NAVIGATION BAR ---
 .navbar {
     border-bottom: 1px solid #333;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    
-    .navbar-brand, .nav-link {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    .navbar-brand,
+    .nav-link {
         color: #333 !important;
         font-weight: 600;
         transition: color 0.3s ease;
-        
-        &:hover, &.active {
+
+        &:hover,
+        &.active {
             color: $primary-blue !important;
         }
     }
@@ -70,7 +72,7 @@ $navbar-hl: $primary-blue;
         padding: $space-xs;
         background-color: $bg-card;
         transition: transform 0.3s ease;
-        
+
         &:hover {
             transform: scale(1.02);
         }
@@ -105,7 +107,8 @@ $navbar-hl: $primary-blue;
 }
 
 // --- CARDS & GRID ITEMS ---
-.card, .quarto-grid-item {
+.card,
+.quarto-grid-item {
     background-color: $bg-card !important;
     border: 1px solid #1f2937 !important;
     border-left: 4px solid $primary-blue !important;
@@ -115,13 +118,30 @@ $navbar-hl: $primary-blue;
 
     &:hover {
         transform: translateY(-4px);
-        box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
         border-color: $primary-blue !important;
     }
 }
 
+.card-text-center {
+    text-align: center;
+
+    // Center images
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    // Center flex containers like button groups
+    .about-links {
+        justify-content: center;
+    }
+}
+
 // --- TABLES ---
-table, .table {
+table,
+.table {
     background-color: $bg-card !important;
     color: $text-muted !important;
     border: 1px solid #333 !important;
@@ -148,6 +168,7 @@ table, .table {
 // --- GENERAL HOVERS ---
 a {
     transition: all 0.3s ease;
+
     &:hover {
         color: #ff9f43; // Lighter orange for hover
         text-shadow: 0 0 8px rgba(249, 115, 22, 0.6);
